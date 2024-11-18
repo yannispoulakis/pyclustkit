@@ -18,6 +18,15 @@ from pyclustkit.eval.index_specifics.FFT import fft
 
 
 class CVIToolbox:
+    cvi_opt_type = {"max": ['calinski_harabasz', 'cdbw', 'dunn', 'gamma', 'gdi12', 'gdi13', 'gdi21', 'gdi22',
+                            'gdi23', 'gdi31', 'gdi32', 'gdi33', 'gdi41', 'gdi42', 'gdi43', 'gdi51', 'gdi52',
+                            'gdi53', 'gdi61', 'gdi62', 'gdi63', 'pbm', 'point_biserial', 'ratkowsky_lance',
+                            'silhouette', 'tau', 'wemmert_gancarski'],
+                    "min": ['banfeld_raftery', 'c_index', 'davies_bouldin', 'g_plus', 'mcclain_rao',
+                            'ray_turi', 'scott_symons', 's_dbw', 'xie_beni'],
+                    "max_diff": ['ball_hall', 'ksq_detw', 'trace_w', 'trace_wib'],
+                    "min_diff": ['det_ratio', 'log_det_ratio', 'log_ss_ratio']}
+
     def __init__(self, X, y):
         self.X = np.array(X)
         self.y = y
@@ -51,6 +60,8 @@ class CVIToolbox:
                                  'wemmert_gancarski': self.wemmert_gancarski, 'xie_beni': self.xie_beni,
                                  'trace_wib': self.trace_wib,
                                  'tau': self.tau}
+
+
 
     def calculate_icvi(self, cvi='all', exclude=None):
         """

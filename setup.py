@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from gettext import install
 
 from setuptools import setup, find_packages
 
@@ -8,10 +9,10 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 with open("requirements.txt") as req_file:
     install_requires = req_file.read().splitlines()
-
+print(install_requires)
 setup(
     # Meta-data and description
-    name='pyclust-evl',
+    name='pyclustkit',
     version='0.1.0',
     description='A Python library for clustering operations. Evaluation and meta-feature generation.',
     author='Yannis Poulakis',

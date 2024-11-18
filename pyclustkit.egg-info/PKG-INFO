@@ -1,5 +1,5 @@
 Metadata-Version: 2.1
-Name: pyclust-evl
+Name: pyclustkit
 Version: 0.1.0
 Summary: A Python library for clustering operations. Evaluation and meta-feature generation.
 Home-page: https://github.com/yannispoulakis/pyclustkit
@@ -16,12 +16,12 @@ Requires-Dist: dgl==2.2.1
 Requires-Dist: gensim==4.3.3
 Requires-Dist: matplotlib==3.9.2
 Requires-Dist: networkx==3.4.2
-Requires-Dist: numpy==2.1.2
+Requires-Dist: numpy==1.26.4
 Requires-Dist: pandas==2.2.3
 Requires-Dist: Pillow==11.0.0
 Requires-Dist: psutil==6.1.0
 Requires-Dist: scikit_learn==1.5.2
-Requires-Dist: scipy==1.14.1
+Requires-Dist: scipy==1.13.1
 Requires-Dist: setuptools==75.3.0
 Requires-Dist: six==1.16.0
 Requires-Dist: torch==2.3.0

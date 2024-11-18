@@ -25,7 +25,18 @@ def pct_of_discrete(df):
 
 
 def pct_of_mv(df):
-    return np.sum(np.isnan(df)) / df.size
+    """
+    return the percentage of missing values in the dataset.
+    Args:
+        df:
+
+    Returns:
+        (float) in the range of (0,1)
+    """
+    return np.sum(np.sum(np.isnan(df))) / df.size
+
+
+
 
 
 def log2_instances(df):
