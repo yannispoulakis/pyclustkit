@@ -10,7 +10,7 @@ import traceback
 
 class MFExtractor:
     def __init__(self, data=None):
-        self.df = data
+        self.df = np.array(data)
         self.cvimf = CVIMF()
         self.cad = CaD()
         self.mf_categories = ["landmark", "statistics", "descriptive", "similarity-vector"]

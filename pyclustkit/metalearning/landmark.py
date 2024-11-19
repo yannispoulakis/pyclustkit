@@ -25,11 +25,11 @@ class CVIMF:
             float: The CVI value calculated
         """
 
-        if hasattr(CVIMF, algorithm + "_labels"):
+        if hasattr(self, algorithm + "_labels"):
             pass
         else:
-            setattr(CVIMF, algorithm + "_labels", self.algorithms[algorithm](x))
+            setattr(self, algorithm + "_labels", self.algorithms[algorithm](x))
 
-        cvi_value = getattr(cvi, cvi_name)(x, getattr(CVIMF, algorithm + "_labels"))
-        setattr(CVIMF, algorithm + f"_{cvi}", cvi_value)
+        cvi_value = getattr(cvi, cvi_name)(x, getattr(self, algorithm + "_labels"))
+        setattr(self, algorithm + f"_{cvi}", cvi_value)
         return cvi_value

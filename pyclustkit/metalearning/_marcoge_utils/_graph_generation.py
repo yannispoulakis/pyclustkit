@@ -1,6 +1,8 @@
 # TODO: CHANGE TO KEEP ONLY TEMP FILES
 # TODO: Fix bug in  edge sparse matrix creation
 import os
+from traceback import format_list
+
 import numpy as np
 import pandas as pd
 
@@ -10,6 +12,8 @@ from scipy.sparse import coo_matrix
 
 import dgl
 import torch
+from ...deepwalk_custom.core import process_graph
+
 
 core_dir = os.path.dirname(os.path.dirname(__file__))
 
@@ -89,9 +93,11 @@ def extract_node_embeddings(dataset_name):
     edge_list_path = os.path.join(core_dir, "temp", "edges", f"el_{dataset_name}.file")
     path_out = os.path.join(core_dir, "temp", "embeddings", f"ne_{dataset_name}.file")
 
-    cmd = 'deepwalk_custom --input ' + edge_list_path + ' --format weighted_edgelist --output ' + path_out
-    cmd_output = os.popen(cmd).read()
-    print(cmd_output)
+    #cmd = 'deepwalk_custom --input ' + edge_list_path + ' --format weighted_edgelist --output ' + path_out
+    #cmd_output = os.popen(cmd).read()
+    #p rint(cmd_output)
+    process_graph(input_file=edge_list_path,output_file=path_out,format="weighted_edgelist")
+
     print("---------------------Node Emb ended--------------------------")
     pass
 
