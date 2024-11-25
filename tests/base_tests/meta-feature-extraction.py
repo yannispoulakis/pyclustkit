@@ -15,9 +15,11 @@ mfe.calculate_mf()
 mfe.calculate_mf(category="landmark")
 mfe.search_mf(search_type='values')
 
+# Retrieve all meta-features of Souto
+mfe.search_mf(included_in="AutoClust", search_type="names")
 x, y = make_blobs(n_samples=100, n_features=2)
 
 from pyclustkit.metalearning.landmark import CVIMF
 cvimf = CVIMF()
-cvimf.calculate_cvi(x, "silhouette", "optics")
+cvimf.calculate_cvi(x)
 cvimf.optics_labels
