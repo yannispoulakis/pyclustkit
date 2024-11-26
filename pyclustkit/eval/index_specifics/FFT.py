@@ -4,9 +4,16 @@ from scipy.spatial import distance_matrix
 
 def fft(X, y , k) -> dict:
     """
-    X: input vectors (n_samples by dimensionality)
-    y: Cluster labels
-    k: number of representatives
+
+    Args:
+        X:
+        y:
+        k:
+
+    Returns:
+        (dict): A dictionary with keys the cluster labels and values the positions of the representatives in the
+                original dataframe
+
     """
     assert k <= X.shape[0], f"Representative points {k} cannot be more than the dataset instances {X.shape[0]}."
     reps_full = {}

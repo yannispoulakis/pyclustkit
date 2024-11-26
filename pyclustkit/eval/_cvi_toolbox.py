@@ -8,6 +8,9 @@ from itertools import combinations
 from scipy.spatial.distance import cdist
 from pyclustkit.eval.index_specifics.representatives import *
 from pyclustkit.eval.index_specifics.FFT import fft
+import traceback
+
+
 
 
 # TODO: Write Hausdorff in simpler terms
@@ -29,7 +32,7 @@ class CVIToolbox:
 
     def __init__(self, X, y):
         self.X = np.array(X)
-        self.y = y
+        self.y = np.array(y)
         self.noclusters = len(np.unique(self.y))
 
         self.cvi_higher_best = {'dunn': True}
@@ -104,12 +107,14 @@ class CVIToolbox:
                     self.cvi_results[index] = self.cvi_methods_list[index]()
                 except Exception as e:
                     print(f'{index}: {e}')
+                    traceback.print_exc()
         else:
             for index in cvi:
                 try:
                     self.cvi_results[index] = self.cvi_methods_list[index]()
                 except Exception as e:
                     print(f'{index}: {e}')
+                    traceback.print_exc()
 
     def execute_subprocess(self, subprocess):
         sg = get_subgraph(process_adg, subprocess)
@@ -234,15 +239,19 @@ class CVIToolbox:
         Returns:
 
         """
+        cc = self.execute_subprocess("cluster_centers")
+
         reps = fft(self.X, self.y, 5)
-        coh, compactness = cohesion(self.X, self.y, reps)
+        coh, compactness = cohesion(self.X, self.y, reps, cc)
 
         cr = closest_representatives(self.X, reps)
         rcr = respective_closest_representatives(reps, cr)
         dens = density(self.X, self.y, rcr)
         inter_dens = inter_density(dens)
         sep = cluster_separation(self.X, rcr, inter_dens)
+        print(sep, compactness)
         sc = sep * compactness
+        print(sc , coh)
         return sc * coh
 
     def det_ratio(self):
@@ -273,6 +282,8 @@ class CVIToolbox:
 
     def g_plus(self):
         s_plus, s_minus, nb, nw = self.execute_subprocess('s_values')
+        print("s_plus")
+        print(s_minus)
         return (2 * s_minus) / ((self.X.shape[0] * (self.X.shape[0] - 1)) / 2)
 
     def gamma(self):
@@ -594,10 +605,18 @@ class CVIToolbox:
         S = self.cvi_results['sd_scat']
 
         # calculate sigma
-        wg_scatter_matrices = self.execute_subprocess('within_group_scatter_matrices')
-        wg_scatter_matrices = {i: j / len(self.X[self.y == i]) for i, j in wg_scatter_matrices.items()}
-        sigma = sum([np.linalg.norm(np.diag(x)) for x in wg_scatter_matrices.values()])
-        sigma = (1 / len(np.unique(self.y))) * math.sqrt(sigma)
+        # wg_scatter_matrices = self.execute_subprocess('within_group_scatter_matrices')
+        # wg_scatter_matrices = {i: j / len(self.X[self.y == i]) for i, j in wg_scatter_matrices.items()}
+        # sigma = sum([np.linalg.norm(np.diag(x)) for x in wg_scatter_matrices.values()])
+        # sigma = (1 / len(np.unique(self.y))) * math.sqrt(sigma)
+
+        cluster_stds = []
+        for c in np.unique(self.y):
+            std = np.std(self.X[self.y == c])  # Standard deviation per dimension
+            cluster_stds.append(np.mean(std))
+
+        sigma = np.mean(cluster_stds)
+
 
         ccenters = self.execute_subprocess('cluster_centers')
         midpoints = {(i, j): find_midpoint(ccenters[i].reshape(1, -1), ccenters[j].reshape(1, -1)) for i, j in

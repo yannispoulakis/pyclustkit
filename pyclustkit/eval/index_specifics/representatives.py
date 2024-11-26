@@ -115,56 +115,68 @@ def cluster_separation(X, rcr, inter_cluster_density):
     return sum_ / (1 + inter_cluster_density)
 
 
-def intra_dens(X, y, reps, s):
+def intra_dens(x, y, reps, cluster_centers, s):
     """
     Computes the relative intra-cluster density. That is the number of points within range of the
     representative points of each cluster.
     paper: Definition 6
+    Args:
+        x(np.ndarray): The dataset
+        y(np.ndarray): Cluster labels found
+        reps (dict): Representatives per cluster
+        s (float): shrinking factor value
+        cluster_centers (dict): cluster center vectors in dictionary {cluster: center, ...}
 
-    :param X: Dataset to calculate intra dens.
-    :type X: np.array
-    :param np.array y: Cluster labels for the dataset.
-    :param dic reps: Dictionary holding the per-cluster representatives. Index position based on original array.
-    :param s: A shrink factor for the representatives.
-    :type s: float
+    Returns:
+        (float): intra_dens as defined in definition 6 in paper
     """
 
-    total_card = []
-    total_stdev = []
+
+
+    total_cardinality = 0
+    total_stdev = 0
+    no_reps_per_cluster = len(reps[list(reps.keys())[0]])
+    no_clusters = len(reps.keys())
+
     for cluster in reps.keys():
-        cluster_card = []
-        X_temp = X[np.where(y==int(cluster))]
-        radius = np.std(X_temp)
-        total_stdev.append(radius)
+        x_temp = x[np.where(y == int(cluster))]
+
+        cluster_std = np.std(x_temp)
+        total_stdev += cluster_std
+
+
         for cluster_rep in reps[cluster]:
-            shrunk_rep = X[cluster_rep] - s
-            dist_matrix = distance_matrix(np.reshape(shrunk_rep, (1,X.shape[1])), X_temp)
-            rep_card = (dist_matrix <= radius).sum()
-            cluster_card.append(rep_card/ X_temp.shape[0])
-        total_card.append(sum(cluster_card))
-    dens_cl = sum(total_card) /len(reps[list(reps.keys())[0]])
-    return dens_cl / (len(np.unique(y) * sum(total_stdev)))
+            # (A) shrink representative (pg.777)
+            shrunk_rep = x[cluster_rep] + (s * (cluster_centers[int(cluster)] - x[cluster_rep]))
+            # (B) Find points in radius and divide by no cluster instances to calculate cardinality of representative.
+            dist_matrix = distance_matrix(np.reshape(shrunk_rep, (1,x.shape[1])), x_temp)
+            rep_card = (dist_matrix <= cluster_std).sum() / x_temp.shape[0]
+            total_cardinality += rep_card
+
+    # Dens_cl and intra_dens (definition 6, pg. 778)
+    dens_cl = total_cardinality / no_reps_per_cluster
+    intra_dens_ = dens_cl / (total_stdev * no_clusters)
+
+    return intra_dens_
 
 
-def cohesion(X,y,reps, s_range=np.arange(0.1, 0.9, step=0.1)):
+def cohesion(X, y,reps, cluster_centers,  s_range=np.arange(0.1, 0.9, step=0.1)):
     """
-    returns cohesion of clusters. Definition 9 in paper.
 
-    :param X: The dataset of concern.
-    :type X: np.array or pd.DataFrame
-    :param y: The cluster labels for the dataset.
-    :type y: np.array or pd.DataFrame
-    :param reps: The representatives of each cluster
-    :type reps: dict
-    :param s_range: A list of shrink factors for the representatives.
-    :type s_range: list
-    :return: Cohesion, compactness
-    :rtype: float, float
+    Args:
+        X:
+        y:
+        reps:
+        s_range:
+
+    Returns:
+
     """
     total = []
     for i  in s_range:
-        idens = intra_dens(X,y, reps,i)
+        idens = intra_dens(X,y, reps,cluster_centers, i)
         total.append(idens)
+    print("in cohesion:", total)
     compactness = sum(total) / len(s_range)
     intra_cluster_change = sum(np.ediff1d(total)) / (len(total) - 1)
     return compactness / (1 + intra_cluster_change), compactness

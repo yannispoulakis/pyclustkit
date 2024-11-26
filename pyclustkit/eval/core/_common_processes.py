@@ -271,7 +271,7 @@ def return_s(X: Union[np.array, pd.DataFrame], labels: Union[np.array, pd.DataFr
              precomputed_distances=False) -> Tuple[int, int, int, int]:
     """
     Calculates the necessary values for the gamma and tau cluster validity indices. Returns the following:
-    s_plus : Times points within the same cluster have distance less than points in different clusters.
+    s_plus : Times that points within the same cluster have distance less than points in different clusters.
     s_minus : Times points within the same cluster have distance more than points in different clusters.
     nb : Distances between all the pairs of points that are in different clusters
     nw : Distances between all the pairs of points that are in the same cluster.
@@ -303,12 +303,16 @@ def return_s(X: Union[np.array, pd.DataFrame], labels: Union[np.array, pd.DataFr
     s_plus = 0
     s_minus = 0
     while i < nw and j < nb:
-        if sorted_upper_dist_same[i] < sorted_upper_dist_not_same[j]:
-            s_plus += (nb - j)  # All remaining j elements will be greater
-            i += 1
-        else:
-            s_minus += (nw - i)  # All remaining i elements will be greater
+        if j == nb - 1:
+            s_plus += (nw - (i + 1)) * (nb - 1)
+            break
+        if sorted_upper_dist_same[i] < sorted_upper_dist_not_same[j]:  # All remaining j elements will be greater
             j += 1
+
+        else:
+            s_minus += nb - j # All remaining i elements will be greater
+            s_plus += j
+            i += 1
 
     return s_plus, s_minus, nb, nw
 
