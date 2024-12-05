@@ -35,6 +35,8 @@ class CVIToolbox:
         self.y = np.array(y)
         self.noclusters = len(np.unique(self.y))
 
+        assert self.X.shape[0] == len(self.y), "Dataset instances should match number of labels."
+
         self.cvi_higher_best = {'dunn': True}
         self.processes = {}
         self.processes = deepcopy(common_operations)

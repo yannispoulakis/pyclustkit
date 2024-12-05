@@ -25,13 +25,39 @@ wg_scatter_matrices = {i: j / len(x[y == i]) for i, j in wg_scatter_matrices.ite
 # avg stdev of clusters / should be equal to sigma?
 cluster_stds = []
 for c in np.unique(y):
-    std = np.std(x[y==c])  # Standard deviation per dimension
-    cluster_stds.append(np.mean(std))
+    std = np.std(x[y==c], axis=0)  # Standard deviation per dimension
+    print(std)
+    cluster_stds.append(np.linalg.norm(std))
 
 sigma = np.mean(cluster_stds)
+
+
+cluster_stds = []
+for c in np.unique(y):
+    std = np.var(x[y==c], axis=0)  # Standard deviation per dimension
+    print(std)
+    cluster_stds.append(np.linalg.norm(std))
+
+sigma = np.mean(cluster_stds)
+sigma = math.sqrt(sigma)
+
+# avg stdev of clusters / should be equal to sigma?
+cluster_stds = []
+for c in np.unique(y):
+    std = np.std(x[y==c])  # Standard deviation per dimension
+    print(std)
+    cluster_stds.append(std)
+
+sigma = np.mean(cluster_stds)
+
+
+
 # calculate sigma
-sigma = sum([np.linalg.norm(np.diag(x)) for x in wg_scatter_matrices.values()])
-sigma = (1 / len(np.unique(y))) * math.sqrt(sigma)
+sigma_2 = sum([np.linalg.norm(np.diag(x)) for x in wg_scatter_matrices.values()])
+sigma_2 = (1 / len(np.unique(y))) * math.sqrt(sigma)
+
+
+
 
 midpoints = {(i, j): find_midpoint(cc[i].reshape(1, -1), cc[j].reshape(1, -1)) for i, j in
              combinations(cc.keys(), r=2)}

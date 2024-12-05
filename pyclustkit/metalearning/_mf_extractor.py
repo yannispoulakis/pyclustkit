@@ -6,6 +6,10 @@ from ..metalearning.cad import CaD
 from ..metalearning.marcoge_extractor import marcoge_mf
 
 import traceback
+import logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
 
 
 class MFExtractor:
@@ -217,20 +221,21 @@ class MFExtractor:
 
     def calculate_mf(self, name=None, category=None, included_in=None):
         mf_ = self.search_mf(name=name, category=category, included_in=included_in)
+        logging.info('Initiating meta-feature extraction\n -----')
         for mf in mf_:
             mf_value = None
-            print("-----------")
-            print(f'calculating meta-feature: {mf}')
+
             if 'method_additional_parameters' in mf_[mf].keys():
                 extra_method_parameters = mf_[mf]['method_additional_parameters']
             else:
                 extra_method_parameters = {}
             try:
                 mf_value = mf_[mf]['method'](self.df, **extra_method_parameters)
-                print(mf_value)
+
+
             except Exception as e:
+                logging.error(f'error in {mf}')
                 print("-------------------")
-                print(e)
                 print(traceback.format_exc())
                 print("----------------------")
                 self.errors.append((mf, e))
