@@ -6,6 +6,12 @@ build:
   os: ubuntu-24.04  # Specify Windows as the build OS
   tools:
     python: "3.9"
+
+python:
+  install:
+    - requirements: docs/requirements.txt
+
+
 # Sphinx configuration
 sphinx:
   configuration: docs/source/conf.py  # Path to your Sphinx conf.py file
