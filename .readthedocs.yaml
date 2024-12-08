@@ -3,7 +3,7 @@ version: 2
 
 # The default configuration for the build process
 build:
-  os: windows-2022  # Specify Windows as the build OS
+  os: ubuntu-24.04  # Specify Windows as the build OS
 
 # Sphinx configuration
 sphinx:
