@@ -2,3 +2,6 @@ sphinx_rtd_theme
 numpy
 networkx
 six
+gensim
+pandas
+scipy
