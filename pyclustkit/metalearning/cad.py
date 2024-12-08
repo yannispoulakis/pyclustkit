@@ -7,6 +7,14 @@ from scipy.stats import zscore
 from scipy.stats import spearmanr
 
 def distance_vector(X):
+    """
+    Calculates the vector of pairwise distances of the dataset.
+    Args:
+        X (np.ndarray or pd.DataFrame): The dataset to calculate distances.
+
+    Returns:
+        list: The list of pairwise distances.
+    """
     dvector = []
     for i in range(X.shape[0]):
         for j in range(i + 1, X.shape[0]):
@@ -15,6 +23,14 @@ def distance_vector(X):
 
 
 def correlation_vector(X):
+    """
+    Calculates the vector of pairwise distances of the dataset.
+    Args (np.ndarray or pd.DataFrame):
+        X: The dataset to calculate distances.
+
+    Returns:
+        list: The list of pairwise distances.
+    """
     cvector = []
     for i in range(X.shape[0]):
         for j in range(i + 1, X.shape[0]):
@@ -27,14 +43,11 @@ def correlation_vector(X):
     return np.asarray(cvector)
 
 
-
-
-
-
-
-
 class CaD:
     # TODO: Check if the meta features need to be normalized
+    """
+    A class to calculate meta-features based on pairwise distance and spearman correlation.
+    """
     def __init__(self):
         self.df = None
         self.distance_vector = None

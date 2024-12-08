@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyclustkit.eval package &mdash; pyclustkit 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pyclustkit.eval.core package" href="pyclustkit.eval.core.html" />
+    <link rel="prev" title="pyclustkit.metalearning package" href="pyclustkit.metalearning.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pyclustkit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyclustkit_usage.html">pyclustkit usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cite_us.html">Citing this work</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Meta-Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyclustkit.metalearning.html">pyclustkit.metalearning package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#module-pyclustkit.metalearning.cad">pyclustkit.metalearning.cad module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD"><code class="docutils literal notranslate"><span class="pre">CaD</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.cad"><code class="docutils literal notranslate"><span class="pre">CaD.cad()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.correlation"><code class="docutils literal notranslate"><span class="pre">CaD.correlation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.ferrari_distance"><code class="docutils literal notranslate"><span class="pre">CaD.ferrari_distance()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.cad.correlation_vector"><code class="docutils literal notranslate"><span class="pre">correlation_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.cad.distance_vector"><code class="docutils literal notranslate"><span class="pre">distance_vector()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#module-pyclustkit.metalearning.descriptive">pyclustkit.metalearning.descriptive module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.features_to_instances_ratio"><code class="docutils literal notranslate"><span class="pre">features_to_instances_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.instances_to_features_ratio"><code class="docutils literal notranslate"><span class="pre">instances_to_features_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log10_attributes"><code class="docutils literal notranslate"><span class="pre">log10_attributes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log10_instances"><code class="docutils literal notranslate"><span class="pre">log10_instances()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log2_attributes"><code class="docutils literal notranslate"><span class="pre">log2_attributes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log2_instances"><code class="docutils literal notranslate"><span class="pre">log2_instances()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log_features_to_instances_ratio"><code class="docutils literal notranslate"><span class="pre">log_features_to_instances_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log_instances_to_features_ratio"><code class="docutils literal notranslate"><span class="pre">log_instances_to_features_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.pct_of_discrete"><code class="docutils literal notranslate"><span class="pre">pct_of_discrete()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.pct_of_mv"><code class="docutils literal notranslate"><span class="pre">pct_of_mv()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#module-pyclustkit.metalearning.landmark">pyclustkit.metalearning.landmark module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.landmark.CVIMF"><code class="docutils literal notranslate"><span class="pre">CVIMF</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.landmark.CVIMF.calculate_cvi"><code class="docutils literal notranslate"><span class="pre">CVIMF.calculate_cvi()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#module-pyclustkit.metalearning.marcoge_extractor">pyclustkit.metalearning.marcoge_extractor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.marcoge_extractor.marcoge_mf"><code class="docutils literal notranslate"><span class="pre">marcoge_mf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.marcoge_extractor.metafeature_extractor_train"><code class="docutils literal notranslate"><span class="pre">metafeature_extractor_train()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#module-pyclustkit.metalearning.statistics">pyclustkit.metalearning.statistics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.hopkins"><code class="docutils literal notranslate"><span class="pre">hopkins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.kurtosis_of_pca_first_component"><code class="docutils literal notranslate"><span class="pre">kurtosis_of_pca_first_component()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.max_kurtosis_of_continuous"><code class="docutils literal notranslate"><span class="pre">max_kurtosis_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.max_skewness_of_continuous"><code class="docutils literal notranslate"><span class="pre">max_skewness_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_absolute_continuous_feature_correlation"><code class="docutils literal notranslate"><span class="pre">mean_absolute_continuous_feature_correlation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_concentration_between_discrete"><code class="docutils literal notranslate"><span class="pre">mean_concentration_between_discrete()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_entropy_of_discrete"><code class="docutils literal notranslate"><span class="pre">mean_entropy_of_discrete()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_kurtosis_of_continuous"><code class="docutils literal notranslate"><span class="pre">mean_kurtosis_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_skewness_of_continuous"><code class="docutils literal notranslate"><span class="pre">mean_skewness_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.min_kurtosis_of_continuous"><code class="docutils literal notranslate"><span class="pre">min_kurtosis_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.min_skewness_of_continuous"><code class="docutils literal notranslate"><span class="pre">min_skewness_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.pca_95_deviations_to_features_ratio"><code class="docutils literal notranslate"><span class="pre">pca_95_deviations_to_features_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.pct_of_outliers"><code class="docutils literal notranslate"><span class="pre">pct_of_outliers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.skewness_of_pca_first_component"><code class="docutils literal notranslate"><span class="pre">skewness_of_pca_first_component()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.std_kurtosis_of_continuous"><code class="docutils literal notranslate"><span class="pre">std_kurtosis_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.std_skewness_of_continuous"><code class="docutils literal notranslate"><span class="pre">std_skewness_of_continuous()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#module-pyclustkit.metalearning.t_squared">pyclustkit.metalearning.t_squared module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.t_squared.mv_normality_test"><code class="docutils literal notranslate"><span class="pre">mv_normality_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.t_squared.t_squared_outliers"><code class="docutils literal notranslate"><span class="pre">t_squared_outliers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.t_squared.t_squared_skewness"><code class="docutils literal notranslate"><span class="pre">t_squared_skewness()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.t_squared.tsquared_transform"><code class="docutils literal notranslate"><span class="pre">tsquared_transform()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#module-pyclustkit.metalearning.utils">pyclustkit.metalearning.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.metalearning.html#pyclustkit.metalearning.utils.find_discrete"><code class="docutils literal notranslate"><span class="pre">find_discrete()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.metalearning.html#module-pyclustkit.metalearning">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Clustering Evaluation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyclustkit.eval package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.core.html">pyclustkit.eval.core package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.eval.core.html#module-pyclustkit.eval.core">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html">pyclustkit.eval.index_specifics package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.FFT">pyclustkit.eval.index_specifics.FFT module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.representatives">pyclustkit.eval.index_specifics.representatives module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.s">pyclustkit.eval.index_specifics.s module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.sd">pyclustkit.eval.index_specifics.sd module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.utils.html">pyclustkit.eval.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyclustkit.eval.utils.html#module-pyclustkit.eval.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyclustkit.eval.cvi">pyclustkit.eval.cvi module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.ball_hall"><code class="docutils literal notranslate"><span class="pre">ball_hall()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.banfeld_raftery"><code class="docutils literal notranslate"><span class="pre">banfeld_raftery()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.c_index"><code class="docutils literal notranslate"><span class="pre">c_index()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.calinski_harabasz"><code class="docutils literal notranslate"><span class="pre">calinski_harabasz()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.cdbw"><code class="docutils literal notranslate"><span class="pre">cdbw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.davies_bouldin"><code class="docutils literal notranslate"><span class="pre">davies_bouldin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.det_ratio"><code class="docutils literal notranslate"><span class="pre">det_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.dunn"><code class="docutils literal notranslate"><span class="pre">dunn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.friedman_rudin_1"><code class="docutils literal notranslate"><span class="pre">friedman_rudin_1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.friedman_rudin_2"><code class="docutils literal notranslate"><span class="pre">friedman_rudin_2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gamma"><code class="docutils literal notranslate"><span class="pre">gamma()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi12"><code class="docutils literal notranslate"><span class="pre">gdi12()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi13"><code class="docutils literal notranslate"><span class="pre">gdi13()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi21"><code class="docutils literal notranslate"><span class="pre">gdi21()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi22"><code class="docutils literal notranslate"><span class="pre">gdi22()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi23"><code class="docutils literal notranslate"><span class="pre">gdi23()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi31"><code class="docutils literal notranslate"><span class="pre">gdi31()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi32"><code class="docutils literal notranslate"><span class="pre">gdi32()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi33"><code class="docutils literal notranslate"><span class="pre">gdi33()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi41"><code class="docutils literal notranslate"><span class="pre">gdi41()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi42"><code class="docutils literal notranslate"><span class="pre">gdi42()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi43"><code class="docutils literal notranslate"><span class="pre">gdi43()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi51"><code class="docutils literal notranslate"><span class="pre">gdi51()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi52"><code class="docutils literal notranslate"><span class="pre">gdi52()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi53"><code class="docutils literal notranslate"><span class="pre">gdi53()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi61"><code class="docutils literal notranslate"><span class="pre">gdi61()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi62"><code class="docutils literal notranslate"><span class="pre">gdi62()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.gdi63"><code class="docutils literal notranslate"><span class="pre">gdi63()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.ksq_detw"><code class="docutils literal notranslate"><span class="pre">ksq_detw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.log_det_ratio"><code class="docutils literal notranslate"><span class="pre">log_det_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.log_ss_ratio"><code class="docutils literal notranslate"><span class="pre">log_ss_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.mcclain_rao"><code class="docutils literal notranslate"><span class="pre">mcclain_rao()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.pbm"><code class="docutils literal notranslate"><span class="pre">pbm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.point_biserial"><code class="docutils literal notranslate"><span class="pre">point_biserial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.ratkowsky_lance"><code class="docutils literal notranslate"><span class="pre">ratkowsky_lance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.ray_turi"><code class="docutils literal notranslate"><span class="pre">ray_turi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.s_dbw"><code class="docutils literal notranslate"><span class="pre">s_dbw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.scott_symons"><code class="docutils literal notranslate"><span class="pre">scott_symons()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.sd_dis"><code class="docutils literal notranslate"><span class="pre">sd_dis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.sd_scat"><code class="docutils literal notranslate"><span class="pre">sd_scat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.silhouette"><code class="docutils literal notranslate"><span class="pre">silhouette()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.tau"><code class="docutils literal notranslate"><span class="pre">tau()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.trace_w"><code class="docutils literal notranslate"><span class="pre">trace_w()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.trace_wib"><code class="docutils literal notranslate"><span class="pre">trace_wib()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.wemmert_gancarski"><code class="docutils literal notranslate"><span class="pre">wemmert_gancarski()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.cvi.xie_beni"><code class="docutils literal notranslate"><span class="pre">xie_beni()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyclustkit.eval.external_cvi">pyclustkit.eval.external_cvi module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyclustkit.eval.external_cvi.compute_external_cvis"><code class="docutils literal notranslate"><span class="pre">compute_external_cvis()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyclustkit.eval">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyclustkit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pyclustkit.eval package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pyclustkit.eval.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyclustkit-eval-package">
+<h1>pyclustkit.eval package<a class="headerlink" href="#pyclustkit-eval-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyclustkit.eval.core.html">pyclustkit.eval.core package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.eval.core.html#module-pyclustkit.eval.core">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyclustkit.eval.index_specifics.html">pyclustkit.eval.index_specifics package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.FFT">pyclustkit.eval.index_specifics.FFT module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.FFT.fft"><code class="docutils literal notranslate"><span class="pre">fft()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.representatives">pyclustkit.eval.index_specifics.representatives module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.representatives.closest_representatives"><code class="docutils literal notranslate"><span class="pre">closest_representatives()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.representatives.cluster_separation"><code class="docutils literal notranslate"><span class="pre">cluster_separation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.representatives.cohesion"><code class="docutils literal notranslate"><span class="pre">cohesion()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.representatives.density"><code class="docutils literal notranslate"><span class="pre">density()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.representatives.inter_density"><code class="docutils literal notranslate"><span class="pre">inter_density()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.representatives.intra_dens"><code class="docutils literal notranslate"><span class="pre">intra_dens()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.representatives.midpoint"><code class="docutils literal notranslate"><span class="pre">midpoint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.representatives.respective_closest_representatives"><code class="docutils literal notranslate"><span class="pre">respective_closest_representatives()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.s">pyclustkit.eval.index_specifics.s module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.s.return_s"><code class="docutils literal notranslate"><span class="pre">return_s()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.s.upper_triangle"><code class="docutils literal notranslate"><span class="pre">upper_triangle()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.sd">pyclustkit.eval.index_specifics.sd module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#pyclustkit.eval.index_specifics.sd.dens_bw"><code class="docutils literal notranslate"><span class="pre">dens_bw()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyclustkit.eval.utils.html">pyclustkit.eval.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyclustkit.eval.utils.html#module-pyclustkit.eval.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pyclustkit.eval.cvi">
+<span id="pyclustkit-eval-cvi-module"></span><h2>pyclustkit.eval.cvi module<a class="headerlink" href="#module-pyclustkit.eval.cvi" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.ball_hall">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">ball_hall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#ball_hall"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.ball_hall" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.banfeld_raftery">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">banfeld_raftery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#banfeld_raftery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.banfeld_raftery" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.c_index">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">c_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#c_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.c_index" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.calinski_harabasz">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">calinski_harabasz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#calinski_harabasz"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.calinski_harabasz" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.cdbw">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">cdbw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#cdbw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.cdbw" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong></p></li>
+<li><p><strong>y</strong></p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.davies_bouldin">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">davies_bouldin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#davies_bouldin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.davies_bouldin" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.det_ratio">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">det_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#det_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.det_ratio" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.dunn">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">dunn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#dunn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.dunn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.friedman_rudin_1">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">friedman_rudin_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#friedman_rudin_1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.friedman_rudin_1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.friedman_rudin_2">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">friedman_rudin_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#friedman_rudin_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.friedman_rudin_2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gamma">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precomputed_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gamma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gamma" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi12">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi12</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi12"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi12" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi13">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi13</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi13"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi13" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi21">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi21"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi21" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi22">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi22</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi22"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi22" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi23">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi23</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi23"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi23" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi31">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi31</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi31"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi31" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi32">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi32" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi33">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi33</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi33" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi41">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi41</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi41"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi41" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi42">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi42</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi42"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi42" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi43">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi43</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi43"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi43" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi51">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi51</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi51"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi51" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi52">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi52</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi52"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi52" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi53">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi53</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi53"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi53" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi61">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi61</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi61"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi61" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi62">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi62</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi62"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi62" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.gdi63">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">gdi63</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#gdi63"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.gdi63" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.ksq_detw">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">ksq_detw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#ksq_detw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.ksq_detw" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.log_det_ratio">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">log_det_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#log_det_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.log_det_ratio" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.log_ss_ratio">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">log_ss_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#log_ss_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.log_ss_ratio" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.mcclain_rao">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">mcclain_rao</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#mcclain_rao"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.mcclain_rao" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.pbm">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">pbm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#pbm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.pbm" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.point_biserial">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">point_biserial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#point_biserial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.point_biserial" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.ratkowsky_lance">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">ratkowsky_lance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#ratkowsky_lance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.ratkowsky_lance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.ray_turi">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">ray_turi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#ray_turi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.ray_turi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.s_dbw">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">s_dbw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#s_dbw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.s_dbw" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.scott_symons">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">scott_symons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#scott_symons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.scott_symons" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.sd_dis">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">sd_dis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#sd_dis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.sd_dis" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.sd_scat">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">sd_scat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#sd_scat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.sd_scat" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.silhouette">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">silhouette</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#silhouette"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.silhouette" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.tau">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">tau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precomputed_distances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#tau"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.tau" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.trace_w">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">trace_w</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#trace_w"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.trace_w" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.trace_wib">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">trace_wib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#trace_wib"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.trace_wib" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.wemmert_gancarski">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">wemmert_gancarski</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#wemmert_gancarski"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.wemmert_gancarski" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.cvi.xie_beni">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.cvi.</span></span><span class="sig-name descname"><span class="pre">xie_beni</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/cvi.html#xie_beni"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.cvi.xie_beni" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyclustkit.eval.external_cvi">
+<span id="pyclustkit-eval-external-cvi-module"></span><h2>pyclustkit.eval.external_cvi module<a class="headerlink" href="#module-pyclustkit.eval.external_cvi" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclustkit.eval.external_cvi.compute_external_cvis">
+<span class="sig-prename descclassname"><span class="pre">pyclustkit.eval.external_cvi.</span></span><span class="sig-name descname"><span class="pre">compute_external_cvis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">true_labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_labels</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclustkit/eval/external_cvi.html#compute_external_cvis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclustkit.eval.external_cvi.compute_external_cvis" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyclustkit.eval">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyclustkit.eval" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pyclustkit.metalearning.html" class="btn btn-neutral float-left" title="pyclustkit.metalearning package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pyclustkit.eval.core.html" class="btn btn-neutral float-right" title="pyclustkit.eval.core package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Yannis Poulakis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

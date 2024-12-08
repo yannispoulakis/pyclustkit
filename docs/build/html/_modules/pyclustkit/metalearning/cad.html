@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyclustkit.metalearning.cad &mdash; pyclustkit 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            pyclustkit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pyclustkit_usage.html">pyclustkit usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cite_us.html">Citing this work</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Meta-Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pyclustkit.metalearning.html">pyclustkit.metalearning package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#module-pyclustkit.metalearning.cad">pyclustkit.metalearning.cad module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD"><code class="docutils literal notranslate"><span class="pre">CaD</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.cad"><code class="docutils literal notranslate"><span class="pre">CaD.cad()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.correlation"><code class="docutils literal notranslate"><span class="pre">CaD.correlation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.ferrari_distance"><code class="docutils literal notranslate"><span class="pre">CaD.ferrari_distance()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.correlation_vector"><code class="docutils literal notranslate"><span class="pre">correlation_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.distance_vector"><code class="docutils literal notranslate"><span class="pre">distance_vector()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#module-pyclustkit.metalearning.descriptive">pyclustkit.metalearning.descriptive module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.features_to_instances_ratio"><code class="docutils literal notranslate"><span class="pre">features_to_instances_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.instances_to_features_ratio"><code class="docutils literal notranslate"><span class="pre">instances_to_features_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log10_attributes"><code class="docutils literal notranslate"><span class="pre">log10_attributes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log10_instances"><code class="docutils literal notranslate"><span class="pre">log10_instances()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log2_attributes"><code class="docutils literal notranslate"><span class="pre">log2_attributes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log2_instances"><code class="docutils literal notranslate"><span class="pre">log2_instances()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log_features_to_instances_ratio"><code class="docutils literal notranslate"><span class="pre">log_features_to_instances_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.log_instances_to_features_ratio"><code class="docutils literal notranslate"><span class="pre">log_instances_to_features_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.pct_of_discrete"><code class="docutils literal notranslate"><span class="pre">pct_of_discrete()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.descriptive.pct_of_mv"><code class="docutils literal notranslate"><span class="pre">pct_of_mv()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#module-pyclustkit.metalearning.landmark">pyclustkit.metalearning.landmark module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.landmark.CVIMF"><code class="docutils literal notranslate"><span class="pre">CVIMF</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.landmark.CVIMF.calculate_cvi"><code class="docutils literal notranslate"><span class="pre">CVIMF.calculate_cvi()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#module-pyclustkit.metalearning.marcoge_extractor">pyclustkit.metalearning.marcoge_extractor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.marcoge_extractor.marcoge_mf"><code class="docutils literal notranslate"><span class="pre">marcoge_mf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.marcoge_extractor.metafeature_extractor_train"><code class="docutils literal notranslate"><span class="pre">metafeature_extractor_train()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#module-pyclustkit.metalearning.statistics">pyclustkit.metalearning.statistics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.hopkins"><code class="docutils literal notranslate"><span class="pre">hopkins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.kurtosis_of_pca_first_component"><code class="docutils literal notranslate"><span class="pre">kurtosis_of_pca_first_component()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.max_kurtosis_of_continuous"><code class="docutils literal notranslate"><span class="pre">max_kurtosis_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.max_skewness_of_continuous"><code class="docutils literal notranslate"><span class="pre">max_skewness_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_absolute_continuous_feature_correlation"><code class="docutils literal notranslate"><span class="pre">mean_absolute_continuous_feature_correlation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_concentration_between_discrete"><code class="docutils literal notranslate"><span class="pre">mean_concentration_between_discrete()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_entropy_of_discrete"><code class="docutils literal notranslate"><span class="pre">mean_entropy_of_discrete()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_kurtosis_of_continuous"><code class="docutils literal notranslate"><span class="pre">mean_kurtosis_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.mean_skewness_of_continuous"><code class="docutils literal notranslate"><span class="pre">mean_skewness_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.min_kurtosis_of_continuous"><code class="docutils literal notranslate"><span class="pre">min_kurtosis_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.min_skewness_of_continuous"><code class="docutils literal notranslate"><span class="pre">min_skewness_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.pca_95_deviations_to_features_ratio"><code class="docutils literal notranslate"><span class="pre">pca_95_deviations_to_features_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.pct_of_outliers"><code class="docutils literal notranslate"><span class="pre">pct_of_outliers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.skewness_of_pca_first_component"><code class="docutils literal notranslate"><span class="pre">skewness_of_pca_first_component()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.std_kurtosis_of_continuous"><code class="docutils literal notranslate"><span class="pre">std_kurtosis_of_continuous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.statistics.std_skewness_of_continuous"><code class="docutils literal notranslate"><span class="pre">std_skewness_of_continuous()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#module-pyclustkit.metalearning.t_squared">pyclustkit.metalearning.t_squared module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.t_squared.mv_normality_test"><code class="docutils literal notranslate"><span class="pre">mv_normality_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.t_squared.t_squared_outliers"><code class="docutils literal notranslate"><span class="pre">t_squared_outliers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.t_squared.t_squared_skewness"><code class="docutils literal notranslate"><span class="pre">t_squared_skewness()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.t_squared.tsquared_transform"><code class="docutils literal notranslate"><span class="pre">tsquared_transform()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#module-pyclustkit.metalearning.utils">pyclustkit.metalearning.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.utils.find_discrete"><code class="docutils literal notranslate"><span class="pre">find_discrete()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.metalearning.html#module-pyclustkit.metalearning">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Clustering Evaluation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../pyclustkit.eval.html">pyclustkit.eval package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.eval.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.core.html">pyclustkit.eval.core package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.eval.core.html#module-pyclustkit.eval.core">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.index_specifics.html">pyclustkit.eval.index_specifics package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.eval.index_specifics.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.FFT">pyclustkit.eval.index_specifics.FFT module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.representatives">pyclustkit.eval.index_specifics.representatives module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.s">pyclustkit.eval.index_specifics.s module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics.sd">pyclustkit.eval.index_specifics.sd module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.eval.index_specifics.html#module-pyclustkit.eval.index_specifics">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.utils.html">pyclustkit.eval.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyclustkit.eval.utils.html#module-pyclustkit.eval.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.eval.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.eval.html#module-pyclustkit.eval.cvi">pyclustkit.eval.cvi module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.ball_hall"><code class="docutils literal notranslate"><span class="pre">ball_hall()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.banfeld_raftery"><code class="docutils literal notranslate"><span class="pre">banfeld_raftery()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.c_index"><code class="docutils literal notranslate"><span class="pre">c_index()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.calinski_harabasz"><code class="docutils literal notranslate"><span class="pre">calinski_harabasz()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.cdbw"><code class="docutils literal notranslate"><span class="pre">cdbw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.davies_bouldin"><code class="docutils literal notranslate"><span class="pre">davies_bouldin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.det_ratio"><code class="docutils literal notranslate"><span class="pre">det_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.dunn"><code class="docutils literal notranslate"><span class="pre">dunn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.friedman_rudin_1"><code class="docutils literal notranslate"><span class="pre">friedman_rudin_1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.friedman_rudin_2"><code class="docutils literal notranslate"><span class="pre">friedman_rudin_2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gamma"><code class="docutils literal notranslate"><span class="pre">gamma()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi12"><code class="docutils literal notranslate"><span class="pre">gdi12()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi13"><code class="docutils literal notranslate"><span class="pre">gdi13()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi21"><code class="docutils literal notranslate"><span class="pre">gdi21()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi22"><code class="docutils literal notranslate"><span class="pre">gdi22()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi23"><code class="docutils literal notranslate"><span class="pre">gdi23()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi31"><code class="docutils literal notranslate"><span class="pre">gdi31()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi32"><code class="docutils literal notranslate"><span class="pre">gdi32()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi33"><code class="docutils literal notranslate"><span class="pre">gdi33()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi41"><code class="docutils literal notranslate"><span class="pre">gdi41()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi42"><code class="docutils literal notranslate"><span class="pre">gdi42()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi43"><code class="docutils literal notranslate"><span class="pre">gdi43()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi51"><code class="docutils literal notranslate"><span class="pre">gdi51()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi52"><code class="docutils literal notranslate"><span class="pre">gdi52()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi53"><code class="docutils literal notranslate"><span class="pre">gdi53()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi61"><code class="docutils literal notranslate"><span class="pre">gdi61()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi62"><code class="docutils literal notranslate"><span class="pre">gdi62()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.gdi63"><code class="docutils literal notranslate"><span class="pre">gdi63()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.ksq_detw"><code class="docutils literal notranslate"><span class="pre">ksq_detw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.log_det_ratio"><code class="docutils literal notranslate"><span class="pre">log_det_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.log_ss_ratio"><code class="docutils literal notranslate"><span class="pre">log_ss_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.mcclain_rao"><code class="docutils literal notranslate"><span class="pre">mcclain_rao()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.pbm"><code class="docutils literal notranslate"><span class="pre">pbm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.point_biserial"><code class="docutils literal notranslate"><span class="pre">point_biserial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.ratkowsky_lance"><code class="docutils literal notranslate"><span class="pre">ratkowsky_lance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.ray_turi"><code class="docutils literal notranslate"><span class="pre">ray_turi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.s_dbw"><code class="docutils literal notranslate"><span class="pre">s_dbw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.scott_symons"><code class="docutils literal notranslate"><span class="pre">scott_symons()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.sd_dis"><code class="docutils literal notranslate"><span class="pre">sd_dis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.sd_scat"><code class="docutils literal notranslate"><span class="pre">sd_scat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.silhouette"><code class="docutils literal notranslate"><span class="pre">silhouette()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.tau"><code class="docutils literal notranslate"><span class="pre">tau()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.trace_w"><code class="docutils literal notranslate"><span class="pre">trace_w()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.trace_wib"><code class="docutils literal notranslate"><span class="pre">trace_wib()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.wemmert_gancarski"><code class="docutils literal notranslate"><span class="pre">wemmert_gancarski()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.cvi.xie_beni"><code class="docutils literal notranslate"><span class="pre">xie_beni()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.eval.html#module-pyclustkit.eval.external_cvi">pyclustkit.eval.external_cvi module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyclustkit.eval.html#pyclustkit.eval.external_cvi.compute_external_cvis"><code class="docutils literal notranslate"><span class="pre">compute_external_cvis()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pyclustkit.eval.html#module-pyclustkit.eval">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyclustkit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">pyclustkit.metalearning.cad</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for pyclustkit.metalearning.cad</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">skew</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">kurtosis</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">zscore</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">spearmanr</span>
+
+<div class="viewcode-block" id="distance_vector">
+<a class="viewcode-back" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.distance_vector">[docs]</a>
+<span class="k">def</span> <span class="nf">distance_vector</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the vector of pairwise distances of the dataset.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        X (np.ndarray or pd.DataFrame): The dataset to calculate distances.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: The list of pairwise distances.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dvector</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">dvector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">X</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="p">:]))</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">dvector</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="correlation_vector">
+<a class="viewcode-back" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.correlation_vector">[docs]</a>
+<span class="k">def</span> <span class="nf">correlation_vector</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the vector of pairwise distances of the dataset.</span>
+<span class="sd">    Args (np.ndarray or pd.DataFrame):</span>
+<span class="sd">        X: The dataset to calculate distances.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: The list of pairwise distances.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cvector</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">cor_</span> <span class="o">=</span> <span class="n">spearmanr</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:],</span> <span class="n">X</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="p">:])</span><span class="o">.</span><span class="n">correlation</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">cor_</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">cor_</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">cor_</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">cvector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cor_</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">cvector</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="CaD">
+<a class="viewcode-back" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD">[docs]</a>
+<span class="k">class</span> <span class="nc">CaD</span><span class="p">:</span>
+    <span class="c1"># TODO: Check if the meta features need to be normalized</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to calculate meta-features based on pairwise distance and spearman correlation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distance_vector</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">correlation_vector</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ferrari_distance_mf</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">correlation_mf</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_calculate_vector_properties</span><span class="p">(</span><span class="n">vector</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method is used to calculate the meta-features over the pairwise distances or the pairwise correlation</span>
+<span class="sd">        vectors. In general any other vector related to the dataset can be used.</span>
+
+<span class="sd">        :param vector: A vector containing some form of pairwise instance distances.</span>
+<span class="sd">        :type vector: list or np.ndarray</span>
+<span class="sd">        :return: Meta-Features extracted over the instance vector.</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mf</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="c1"># statistical properties</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;Variance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;Standard deviation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;Skewness&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">skew</span><span class="p">(</span><span class="n">vector</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;Kurtosis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kurtosis</span><span class="p">(</span><span class="n">vector</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Distances in certain ranges of [0,1]</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0, 0.1]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.1</span><span class="p">)</span> <span class="o">/</span> <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.1, 0.2]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.2</span><span class="p">))</span> <span class="o">/</span>
+                                           <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.2, 0.3]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.2</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.3</span><span class="p">))</span> <span class="o">/</span>
+                                           <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.3, 0.4]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.4</span><span class="p">))</span> <span class="o">/</span>
+                                           <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.4, 0.5]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.4</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">/</span>
+                                           <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.5, 0.6]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.6</span><span class="p">))</span> <span class="o">/</span>
+                                           <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.6, 0.7]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.6</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.7</span><span class="p">))</span> <span class="o">/</span>
+                                           <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.7, 0.8]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.7</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.8</span><span class="p">))</span> <span class="o">/</span>
+                                           <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.8, 0.9]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.8</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mf">0.9</span><span class="p">))</span> <span class="o">/</span>
+                                           <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values in [0.9, 1]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mf">0.9</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Z-Score Distances in certain ranges of [0,1]</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values with |Z-score| in [0,1)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">zscore</span><span class="p">(</span><span class="n">vector</span><span class="p">),</span> <span class="n">zscore</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values with |Z-score| in [1,2)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">zscore</span><span class="p">(</span><span class="n">vector</span><span class="p">),</span> <span class="n">zscore</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values with |Z-score| in [2,3)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="n">zscore</span><span class="p">(</span><span class="n">vector</span><span class="p">),</span> <span class="n">zscore</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">))</span> <span class="o">/</span> <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f values with |Z-score| in [3, infinity)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="mi">3</span> <span class="o">&lt;=</span> <span class="n">zscore</span><span class="p">(</span><span class="n">vector</span><span class="p">))</span> <span class="o">/</span> <span class="n">vector</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">mf</span>
+
+<div class="viewcode-block" id="CaD.ferrari_distance">
+<a class="viewcode-back" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.ferrari_distance">[docs]</a>
+    <span class="k">def</span> <span class="nf">ferrari_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculates the meta-features from the distance-based vector, as per the Ferrari et al. 2015 paper.</span>
+
+<span class="sd">        :param df: The dataset at hand.</span>
+<span class="sd">        :type df: pd.DataFrame</span>
+<span class="sd">        :return: A dictionary containing the meta-features.</span>
+<span class="sd">        :rtype:  dict.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ferrari_distance_mf</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distance_vector</span> <span class="o">=</span> <span class="n">distance_vector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ferrari_distance_mf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_vector_properties</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distance_vector</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ferrari_distance_mf</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ferrari_distance_mf</span></div>
+
+
+<div class="viewcode-block" id="CaD.correlation">
+<a class="viewcode-back" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.correlation">[docs]</a>
+    <span class="k">def</span> <span class="nf">correlation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculates the meta-features from the distance-based vector, as per the Ferrari et al. 2015 paper.</span>
+
+<span class="sd">        :param df: The dataset at hand.</span>
+<span class="sd">        :type df: pd.DataFrame</span>
+<span class="sd">        :return: A dictionary containing the meta-features.</span>
+<span class="sd">        :rtype:  dict.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span>
+        <span class="n">rank_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">correlation_mf</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">correlation_vector</span> <span class="o">=</span> <span class="n">correlation_vector</span><span class="p">(</span><span class="n">rank_df</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">correlation_mf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_vector_properties</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">correlation_vector</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">correlation_mf</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">correlation_mf</span></div>
+
+
+<div class="viewcode-block" id="CaD.cad">
+<a class="viewcode-back" href="../../../pyclustkit.metalearning.html#pyclustkit.metalearning.cad.CaD.cad">[docs]</a>
+    <span class="k">def</span> <span class="nf">cad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculates the meta-features from the distance-based vector, as per the Ferrari et al. 2015 paper.</span>
+
+<span class="sd">        :param df: The dataset at hand.</span>
+<span class="sd">        :type df: pd.DataFrame</span>
+<span class="sd">        :return: A dictionary containing the meta-features.</span>
+<span class="sd">        :rtype:  dict.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">correlation_vector</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">rank_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">correlation_vector</span> <span class="o">=</span> <span class="n">correlation_vector</span><span class="p">(</span><span class="n">rank_df</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">distance_vector</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distance_vector</span> <span class="o">=</span> <span class="n">distance_vector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_vector_properties</span><span class="p">(</span><span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distance_vector</span> <span class="o">+</span>
+                                                                              <span class="bp">self</span><span class="o">.</span><span class="n">correlation_vector</span><span class="p">))</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Yannis Poulakis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
