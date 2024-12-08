@@ -4,7 +4,8 @@ version: 2
 # The default configuration for the build process
 build:
   os: ubuntu-24.04  # Specify Windows as the build OS
-
+  tools:
+    python: "3.9"
 # Sphinx configuration
 sphinx:
   configuration: docs/conf.py  # Path to your Sphinx conf.py file
