@@ -20,7 +20,7 @@ Pyclustkit can be installed through pypi with
 Otherwise you can also:
 
 * download a demo of this library built with gradio through `here <https://example.com>`_ .
-* Visit the `GitHub Repository <https://example.com>`_ to download the source code. 
+* Visit the `GitHub Repository <https://example.com>`_ to download the source code.
 
 
 Citing this work

@@ -1,0 +1,10 @@
+# .readthedocs.yaml
+version: 2
+
+# The default configuration for the build process
+build:
+  os: windows-2022  # Specify Windows as the build OS
+
+# Sphinx configuration
+sphinx:
+  configuration: docs/conf.py  # Path to your Sphinx conf.py file
