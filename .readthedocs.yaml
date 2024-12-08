@@ -8,4 +8,4 @@ build:
     python: "3.9"
 # Sphinx configuration
 sphinx:
-  configuration: docs/conf.py  # Path to your Sphinx conf.py file
+  configuration: docs/source/conf.py  # Path to your Sphinx conf.py file
