@@ -5,3 +5,6 @@ six
 gensim
 pandas
 scipy
+scikit-learn
+matplotlib
+dgl
