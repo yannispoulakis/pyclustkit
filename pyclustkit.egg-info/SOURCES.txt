@@ -11,6 +11,7 @@ pyclustkit.egg-info/requires.txt
 pyclustkit.egg-info/top_level.txt
 pyclustkit/deepwalk_custom/__init__.py
 pyclustkit/deepwalk_custom/__main__.py
+pyclustkit/deepwalk_custom/core.py
 pyclustkit/deepwalk_custom/graph.py
 pyclustkit/deepwalk_custom/skipgram.py
 pyclustkit/deepwalk_custom/walks.py
