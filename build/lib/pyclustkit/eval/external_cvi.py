@@ -2,7 +2,6 @@ from sklearn.metrics import adjusted_rand_score, homogeneity_score, adjusted_mut
 from sklearn.metrics import completeness_score, fowlkes_mallows_score, homogeneity_completeness_v_measure
 from sklearn.metrics import mutual_info_score, v_measure_score
 import numpy as np
-import pandas as pd
 
 def compute_external_cvis(true_labels, cluster_labels):
     cvis = {}
@@ -39,5 +38,5 @@ def compute_external_cvis(true_labels, cluster_labels):
         cvis['V-Measure'] = v_measure_score(true_labels, cluster_labels)
     except:
         cvis['V-Measure'] = np.nan
-    cvis = pd.DataFrame.from_dict(cvis, orient='index').T
+    # cvis = pd.DataFrame.from_dict(cvis, orient='index').T
     return cvis

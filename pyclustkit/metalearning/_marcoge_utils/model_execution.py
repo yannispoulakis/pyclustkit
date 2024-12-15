@@ -59,11 +59,11 @@ def run_one_training(training_dataloader, test_dataloader, epochs, embeddings_di
 
       model.train()
       train_acc, train_loss, embeddings_dict = train_for_one_epoch(model, optimizer, loss_fn, training_dataloader, embeddings_dict, 'train')
-      print(f'Epoch {epoch} | \tTrain Accuracy: {train_acc:.2f}\tTrain Loss: {train_loss:.5f}', end ='\t')
+      # print(f'Epoch {epoch} | \tTrain Accuracy: {train_acc:.2f}\tTrain Loss: {train_loss:.5f}', end ='\t')
       model.eval()
       test_acc, test_loss, embeddings_dict = train_for_one_epoch(model, optimizer, loss_fn, test_dataloader, embeddings_dict, 'eval')
-      print(f'Test Accuracy: {test_acc:.2f}\tTest Loss {test_loss:.5f}')
-    print('\n\n')
+      # print(f'Test Accuracy: {test_acc:.2f}\tTest Loss {test_loss:.5f}')
+    #print('\n\n')
     torch.save(model, 'clustml/temp/gnn_model.pth')
     return model.state_dict(), embeddings_dict
 

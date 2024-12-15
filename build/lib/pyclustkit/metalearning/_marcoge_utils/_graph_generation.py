@@ -58,6 +58,9 @@ def extract_edges(similarity_matrix, dataset_name="", threshold=0.9):
         print('No edges formed, consider adjusting threshold.')
         return None
 
+    if not os.path.exists(os.path.join(core_dir, "temp", "edges")):
+        os.mkdir(os.path.join(core_dir, "temp", "edges"))
+
     path_to_write = os.path.join(core_dir, "temp", "edges", f"el_{dataset_name}.file")
     with open(path_to_write, 'w') as f:
         for lis in edge_list:
@@ -91,12 +94,14 @@ def extract_node_embeddings(dataset_name):
     :rtype:
     """
     print("Starting Node embeddings extraction (DeepWalk)...... ")
+    if not os.path.exists(os.path.join(core_dir, "temp", "embeddings")):
+        os.mkdir(os.path.join(core_dir, "temp", "embeddings"))
+
     edge_list_path = os.path.join(core_dir, "temp", "edges", f"el_{dataset_name}.file")
     path_out = os.path.join(core_dir, "temp", "embeddings", f"ne_{dataset_name}.file")
 
     process_graph(input_file=edge_list_path,output_file=path_out,format="weighted_edgelist")
 
-    print("---------------------Node Emb ended--------------------------")
     pass
 
 
@@ -120,13 +125,12 @@ def graph_implementation(edge_list_coo,
             line = f.readline()
 
     sorted_node_feat_dict = dict(sorted(node_feat_dict.items(), key=lambda e: e[0]))
-    print(f"len of node feats keys")
     node_feat_array = np.array(list(sorted_node_feat_dict.values()))
-    print("ok till here")
-    print(node_feat_array)
-    print("--------------------")
-    print(graph.num_nodes())
-    print(edge_list_coo)
+    # print("ok till here")
+    # print(node_feat_array)
+    # print("--------------------")
+    # print(graph.num_nodes())
+    # print(edge_list_coo)
     graph.ndata['h'] = torch.FloatTensor(node_feat_array)
     return graph
 

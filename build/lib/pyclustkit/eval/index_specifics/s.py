@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 from scipy.spatial.distance import pdist
 from typing import Union, Tuple
 from pyclustkit.eval.core._utils import upper_triu
@@ -11,7 +10,7 @@ def upper_triangle(matrix):
     return matrix[rows, cols]
 
 
-def return_s(X: Union[np.array, pd.DataFrame], labels: Union[np.array, pd.DataFrame],
+def return_s(X, labels,
              precomputed_distances=False) -> Tuple[int, int, int, int]:
     """
     Calculates the necessary values for the gamma and tau cluster validity indices. Returns the following:

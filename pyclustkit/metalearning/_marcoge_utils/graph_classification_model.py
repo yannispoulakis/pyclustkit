@@ -43,8 +43,8 @@ class GraphConvClassifier(nn.Module):
         # is the same as the out_degree.
         # h = g.in_degrees()
         # h = g.in_degrees().view(-1, 1).float()
-        print(f'embedding: {embedding}')
-        print(embedding[0].shape)
+        # print(f'embedding: {embedding}')
+        # print(embedding[0].shape)
         h = embedding
         # Perform graph convolution and activation function.
         h = F.relu(self.conv1(g, h))

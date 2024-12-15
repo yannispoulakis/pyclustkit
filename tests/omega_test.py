@@ -2,7 +2,7 @@ from pyclustkit.eval import CVIToolbox
 import numpy as np
 
 # Parameters for dataset
-n_samples = 100   # Total number of samples
+n_samples = 121  # Total number of samples
 n_features = 2    # Number of features per sample
 n_clusters = 3    # Number of clusters
 
@@ -13,9 +13,12 @@ X = np.random.rand(n_samples, n_features)
 y = np.random.randint(0, n_clusters, n_samples)
 
 ct = CVIToolbox(X,y)
-ct.calculate_icvi(cvi=["silhouette"])
+ct.calculate_icvi()
 ct.cvi_results
 
 # <-------------------------Meta Learning------------------------------------------------------------->
 from pyclustkit.metalearning import MFExtractor
-mfe = MFExtractor()
+mfe = MFExtractor(data=X)
+
+mfe.calculate_mf()
+mfe.meta_features

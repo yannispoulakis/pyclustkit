@@ -1,13 +1,28 @@
 # The PyClustKit Module: All about clustering in a single Python Module!
 
-The pyclustkit module is built on top of various libraries to enable many clustering operations. 
-Currently, the module is built for clustering evaluation and meta-learning. 
+The pyclustkit module is built to include various state-of-the-art meta-features for algorithm selection in clustering 
+and many clustering validity indices (CVIs) with optimizations to enhance computational speed when calculating many. 
 
-# Table of Contents
+---
+### ⚠️ WARNING: For the Demo Version refer [here](https://github.com/automl-uprc/PyClust-Demo)⚠️
+
+---
+
+## Table of Contents
+- [Requirements](#requirements)
 - [Installation Instructions](#installation-instructions)
 - [Useful Links](#useful-links)
 - [Usage Examples](#usage-examples)
+- [GUI Version](#gui-version)
 - [Cite Us!](#citing-this-work)
+
+# Requirements
+
+This version of pyclustkit requires 
+- Python>=3.12
+- dgl==2.2.1 
+- torch==2.3.0
+- numpy<2.0
 
 # Installation Instructions
 
@@ -17,9 +32,12 @@ The pyclustkit is available to download with pypi
 pip install pyclustkit
 ```
 
-I
+ ⚠️ **Warning** : Required version of dgl==2.2.1 may not be found in the pypi index when using Ubuntu/Debian Releases. 
+This is an issue to be fixed in future versions of the library. For now you can use 
 
-# Useful Links
+```commandline
+pip install pyclustkit -f https://data.dgl.ai/wheels/torch-2.3/repo.html
+```
 
 
 # Usage Examples
@@ -55,11 +73,22 @@ print(ct.cvi_results)
 
 ```
 
+## GUI Version 
+Users can also opt to use the demo version of the library which comes with a graphical interface based on Gradio  and 
+various utilities such as data generation, meta-learner training and visuals. 
+
+### (A)  Ready-To-Use Docker Image
+
+```commandline
+docker run -p 7861:7861 giannispoy/pyclust 
+```
+### (B) Demo Git Repository 
+
+Users can also download the code on the [pyclust-demo repository](https://github.com/automl-uprc/PyClust-Demo) and follow the instructions in the corresponding README 
+file.
 
 
-
-# Citing This Work
-
+### Implemented CVIs
 
 <details>
 <summary>List of Implemented CVI with citations</summary>
@@ -86,17 +115,6 @@ cluster validity. IEEE Transactions on Systems, Man, and CyberneticsÑPART B: CY
 10. **log_ss_ratio**: <i> J. A. Hartigan. Clustering algorithms. New York: Wiley, 1975. </i>
 11. **McClain_Rao**: <i> J. O. McClain and V. R. Rao. Clustisz: A program to test for the quality of
                          clustering of a set of objects. Journal of Marketing Research, 12:456–460, 1975.</i>
-
-
-
-
-
-
-
-
-
-
-
 
 11. trace_w Index
 

@@ -1,9 +1,8 @@
 from collections import defaultdict, deque
 import networkx as nx
-import matplotlib.pyplot as plt
 import io
 from pyclustkit.eval.core._shared_processes import process_adg
-from PIL import Image
+# from PIL import Image
 
 
 def get_subgraph(processes, target):
@@ -80,18 +79,10 @@ def execute_graph(sorted_subgraph, operations_dict):
     return dict(zip(sorted_subgraph,process_results))
 
 
+# Visualization method removed to minimize requirements
+"""
 def visualize_subgraph_as_tree(target, layout='-Grankdir=LR', save_img_path=None, return_as_bytes=True):
-    """
-    Process graph visualized.
-    Args:
-        target (str): Target process of the visualization
-        layout (str): graphviz_layout parameter
-        save_img_path (str): Path to save plot
-        return_as_bytes (bool): Whether to return generated image as byte image
 
-    Returns:
-        bool or Bytes Obj
-    """
     subgraph = get_subgraph(process_adg, target)
 
     # Create a directed graph
@@ -122,3 +113,4 @@ def visualize_subgraph_as_tree(target, layout='-Grankdir=LR', save_img_path=None
         return img
     else:
         return None
+"""

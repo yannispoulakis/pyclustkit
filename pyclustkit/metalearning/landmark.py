@@ -2,10 +2,12 @@
 A script that contains the method for calculating landmark meta-features,
 i.e. meta-features that derive from information provided after training a machine learning algorithm for the task.
 """
-
+import numpy as np
 from sklearn.cluster import MeanShift, DBSCAN, OPTICS
 from ..eval import cvi
+import logging
 
+logging.basicConfig(level=logging.WARNING)
 
 class CVIMF:
     def __init__(self):
@@ -30,6 +32,12 @@ class CVIMF:
         else:
             setattr(self, algorithm + "_labels", self.algorithms[algorithm](x))
 
-        cvi_value = getattr(cvi, cvi_name)(x, getattr(self, algorithm + "_labels"))
+        labels = getattr(self, algorithm + "_labels")
+        if len(np.unique(labels)) <= 1:
+            logging.warning(f"Labels produced by {algorithm} equal to 1, score based "
+                                                f"meta-feature {algorithm}-{cvi_name} will default to NaN")
+            return None
+
+        cvi_value = getattr(cvi, cvi_name)(x, labels)
         setattr(self, algorithm + f"_{cvi}", cvi_value)
         return cvi_value

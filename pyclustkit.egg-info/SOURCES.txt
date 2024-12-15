@@ -1,11 +1,13 @@
 LICENSE
+MANIFEST.in
 README.md
+README_pypi.md
+requirements.txt
 setup.py
 pyclustkit/__init__.py
 pyclustkit.egg-info/PKG-INFO
 pyclustkit.egg-info/SOURCES.txt
 pyclustkit.egg-info/dependency_links.txt
-pyclustkit.egg-info/entry_points.txt
 pyclustkit.egg-info/not-zip-safe
 pyclustkit.egg-info/requires.txt
 pyclustkit.egg-info/top_level.txt
@@ -27,11 +29,9 @@ pyclustkit/eval/core/_shared_processes.py
 pyclustkit/eval/core/_utils.py
 pyclustkit/eval/index_specifics/FFT.py
 pyclustkit/eval/index_specifics/__init__.py
-pyclustkit/eval/index_specifics/_cdbw_tests.py
 pyclustkit/eval/index_specifics/representatives.py
 pyclustkit/eval/index_specifics/s.py
 pyclustkit/eval/index_specifics/sd.py
-pyclustkit/eval/utils/__init__.py
 pyclustkit/metalearning/__init__.py
 pyclustkit/metalearning/_mf_config.py
 pyclustkit/metalearning/_mf_extractor.py
