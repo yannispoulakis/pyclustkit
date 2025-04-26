@@ -5,3 +5,7 @@
 /venv3/
 /venv4/
 /venv5/
+/.idea/
+/dist/
+/pyclustkit.egg-info/
+/tmp_package/
