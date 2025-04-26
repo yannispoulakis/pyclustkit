@@ -1,5 +1,0 @@
-include README_pypi.md
-include requirements.txt
-recursive-include pyclustkit/metalearning/temp *
-
-
