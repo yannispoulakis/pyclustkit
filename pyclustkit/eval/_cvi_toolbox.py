@@ -249,9 +249,7 @@ class CVIToolbox:
         dens = density(self.X, self.y, rcr)
         inter_dens = inter_density(dens)
         sep = cluster_separation(self.X, rcr, inter_dens)
-        print(sep, compactness)
         sc = sep * compactness
-        print(sc , coh)
         return sc * coh
 
     def det_ratio(self):
@@ -282,8 +280,6 @@ class CVIToolbox:
 
     def g_plus(self):
         s_plus, s_minus, nb, nw = self.execute_subprocess('s_values')
-        print("s_plus")
-        print(s_minus)
         return (2 * s_minus) / ((self.X.shape[0] * (self.X.shape[0] - 1)) / 2)
 
     def gamma(self):
@@ -294,7 +290,7 @@ class CVIToolbox:
         Deltas = self.execute_subprocess('max_intra_cluster_distances')
         deltas = self.execute_subprocess('min_inter_cluster_distances')
         return min(deltas.values()) / max(Deltas.values())
-    
+
     def gdi21(self):
         Deltas = self.execute_subprocess('max_intra_cluster_distances')
         deltas = self.execute_subprocess('max_inter_cluster_distances')

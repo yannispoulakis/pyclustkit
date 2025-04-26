@@ -176,7 +176,7 @@ def cohesion(X, y,reps, cluster_centers,  s_range=np.arange(0.1, 0.9, step=0.1))
     for i  in s_range:
         idens = intra_dens(X,y, reps,cluster_centers, i)
         total.append(idens)
-    print("in cohesion:", total)
+
     compactness = sum(total) / len(s_range)
     intra_cluster_change = sum(np.ediff1d(total)) / (len(total) - 1)
     return compactness / (1 + intra_cluster_change), compactness

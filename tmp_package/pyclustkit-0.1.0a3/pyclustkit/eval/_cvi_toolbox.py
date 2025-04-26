@@ -44,12 +44,11 @@ class CVIToolbox:
         self.processes['y']['value'] = self.y
         self.cvi_results = {}
         self.cvi_methods_list = {'ball_hall': self.ball_hall, 'banfeld_raftery': self.banfeld_raftery,
-                                 'c_index': self.c_index,
-                                 'calinski_harabasz': self.calinski_harabasz, 'cdbw': self.cdbw,
-                                 'davies_bouldin': self.davies_bouldin,
-                                 'det_ratio': self.det_ratio, 'dunn': self.dunn,
+                                 'c_index': self.c_index, 'calinski_harabasz': self.calinski_harabasz,
+                                 'cdbw': self.cdbw,
+                                 'davies_bouldin': self.davies_bouldin, 'det_ratio': self.det_ratio, 'dunn': self.dunn,
                                  'g_plus': self.g_plus, 'gamma': self.gamma,
-                                 'gdi12': self.gdi12, 'gdi13': self.gdi13,
+                                 'gdi11': self.gdi11, 'gdi12': self.gdi12, 'gdi13': self.gdi13,
                                  'gdi21': self.gdi21, 'gdi22': self.gdi22, 'gdi23': self.gdi23,
                                  'gdi31': self.gdi31, 'gdi32': self.gdi32, 'gdi33': self.gdi33,
                                  'gdi41': self.gdi41, 'gdi42': self.gdi42, 'gdi43': self.gdi43,
@@ -161,7 +160,6 @@ class CVIToolbox:
 
         return sum / counter
 
-
     def calinski_harabasz(self):
         wgd = self.execute_subprocess("within_group_dispersion")
         bgd = self.execute_subprocess("between_group_dispersion")
@@ -251,9 +249,7 @@ class CVIToolbox:
         dens = density(self.X, self.y, rcr)
         inter_dens = inter_density(dens)
         sep = cluster_separation(self.X, rcr, inter_dens)
-        print(sep, compactness)
         sc = sep * compactness
-        print(sc , coh)
         return sc * coh
 
     def det_ratio(self):
@@ -284,13 +280,16 @@ class CVIToolbox:
 
     def g_plus(self):
         s_plus, s_minus, nb, nw = self.execute_subprocess('s_values')
-        print("s_plus")
-        print(s_minus)
         return (2 * s_minus) / ((self.X.shape[0] * (self.X.shape[0] - 1)) / 2)
 
     def gamma(self):
         s_plus, s_minus, nb, nw = self.execute_subprocess('s_values')
         return (s_plus - s_minus) / (s_plus + s_minus)
+
+    def gdi11(self):
+        Deltas = self.execute_subprocess('max_intra_cluster_distances')
+        deltas = self.execute_subprocess('min_inter_cluster_distances')
+        return min(deltas.values()) / max(Deltas.values())
 
     def gdi21(self):
         Deltas = self.execute_subprocess('max_intra_cluster_distances')

@@ -10,6 +10,7 @@
       <excludeFolder url="file://$MODULE_DIR$/new_test_env" />
       <excludeFolder url="file://$MODULE_DIR$/test_venv" />
       <excludeFolder url="file://$MODULE_DIR$/test_venv2" />
+      <excludeFolder url="file://$MODULE_DIR$/venvNewPCKIT" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.12 (PyClust-Eval) (8)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

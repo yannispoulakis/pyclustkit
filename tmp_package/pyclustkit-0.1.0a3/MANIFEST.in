@@ -3,5 +3,3 @@ include requirements.txt
 recursive-include pyclustkit/metalearning/temp *
 
 
-mkdir tmp_package
-tar -xf dist\pyclustkit-0.1.0a3.tar.gz -C tmp_package
