@@ -120,8 +120,8 @@ multi-representatives. Pattern Recognit. Lett., 29, 773-786.  </i>
 11. **GDI (11,...,61)(12,...,62)(13,...,63) Indexes**: <i>J. C. Bezdek and N. R. Pal. Some new indexes 
 of cluster validity. IEEE Transactions on Systems, Man, and CyberneticsÑPART B: CYBERNETICS, 28, no.3:301–315, 1998.</i>
 
-12. **ksq_detw Index**:  F. H. B. Marriot. Practical problems in a method of cluster analysis. Biometrics,
-27:456–460, 1975.
+12. **ksq_detw Index**: <i> F. H. B. Marriot. Practical problems in a method of cluster analysis. Biometrics,
+27:456–460, 1975. </i>
 
 13. **log_det_ratio Index**: <i> Halkidi et al. On clustering validation techniques. J. Intell. Inf. Syst., 2001. </i>
 14. **log_ss_ratio Index**: <i> J. A. Hartigan. Clustering algorithms. New York: Wiley, 1975. </i>
@@ -148,7 +148,7 @@ of cluster validity. IEEE Transactions on Systems, Man, and CyberneticsÑPART B:
 data set", Proceedings 2001 IEEE International Conference on Data Mining. </i>
 24. **silhouette index**: <i>Rousseeuw P.J. Silhouettes: a graphical aid to the interpretation and validation of
                        cluster analysis. Journal of Computational and Applied Mathematics, 20:53–65,
-                       1987 </i>
+                       1987. </i>
 
 25. **trace_w Index**: <i> A. W. F. Edwards and L. Cavalli-Sforza. A method for cluster analysis.
                            Biometrika, 56:362–375, 1965. </i>
@@ -157,7 +157,7 @@ data set", Proceedings 2001 IEEE International Conference on Data Mining. </i>
 27. **tau Index**: <i> Zhu, Erzhou, Xue Wang, and Feng Liu. "A new cluster validity index for overlapping datasets." 
                  Journal of Physics: Conference Series. Vol. 1168. No. 3. IOP Publishing, 2019.</i> 
 
-28. **wemmert_gancarski Index**: <i> J. Zhang, T. Nguyen, S. Cogill, A. Bhatti, L. Lingkun, S. Yang, S. Nahavandi. (2018). A review on cluster estimation methods and their application to neural spike data. Journal of Neural Engineering.</i> 
+28. **wemmert_gancarski Index**: <i> J. Zhang, T. Nguyen, S. Cogill, A. Bhatti, L. Lingkun, S. Yang, S. Nahavandi. A review on cluster estimation methods and their application to neural spike data. Journal of Neural Engineering, 2018.</i> 
 29. **xie_beni Index**: <i> X.L. Xie and G. Beni. A validity measure for fuzzy clustering. IEEE Transactions on Pattern 
                   Analysis and Machine Intelligence, 1991. </i>
 
