@@ -11,6 +11,7 @@ from pyclustkit.eval.index_specifics.s import return_s
 from pyclustkit.eval.index_specifics.representatives import *
 from pyclustkit.eval.index_specifics.FFT import fft
 from pyclustkit.eval.index_specifics.sd import *
+from pyclustkit.eval.core._common_processes import cluster_centers
 
 
 def dunn(x, y):
