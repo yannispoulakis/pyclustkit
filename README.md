@@ -160,12 +160,3 @@ data set", Proceedings 2001 IEEE International Conference on Data Mining. </i>
 28. **wemmert_gancarski Index**: <i> J. Zhang, T. Nguyen, S. Cogill, A. Bhatti, L. Lingkun, S. Yang, S. Nahavandi. A review on cluster estimation methods and their application to neural spike data. Journal of Neural Engineering, 2018.</i> 
 29. **xie_beni Index**: <i> X.L. Xie and G. Beni. A validity measure for fuzzy clustering. IEEE Transactions on Pattern 
                   Analysis and Machine Intelligence, 1991. </i>
-
-### Implemented Meta-Features
-
-<details>
-<summary>List of Implemented Meta-Features with citations</summary>
-
-1. **test1**
-
-2. **test2**
