@@ -659,7 +659,7 @@ def cdbw(X, y):
     """
 
     representatives = fft(X, y, 5)
-    coh_, compactness_ = cohesion(X, y, reps=representatives, cluster_centers(x, y))
+    coh_, compactness_ = cohesion(X, y, reps=representatives, cluster_centers=cluster_centers(X, y))
 
     cr = closest_representatives(X, representatives)
     rcr = respective_closest_representatives(representatives, cr)
