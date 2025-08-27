@@ -1,35 +1,41 @@
 # The PyClustKit Module: All about clustering in a single Python Module!
 
-The pyclustkit module is built to include various state-of-the-art meta-features for algorithm selection in clustering 
-and many clustering validity indices (CVIs) with optimizations to enhance computational speed when calculating many. 
+The pyclustkit module is built to include various state-of-the-art meta-features for AutoML operatios in clustering, 
+specifically meta-learning. Additionally the library includes the implementation of many clustering validity indices 
+(CVIs) optimized for calculating many of them. 
 
----
-### ⚠️ WARNING: For the Demo Version refer [here](https://github.com/automl-uprc/PyClust-Demo)⚠️
-
----
+While the python module of pyclustkit is the main option to use it programmatically, it can also be used 
+through through the dedicated gradio-based user-interface also provided as a docker image. Instructions are presented 
+in the relevant section. 
 
 ## Table of Contents
-- [Requirements](#requirements)
-- [Installation Instructions](#installation-instructions)
+- [Python Module](#python-module)
+  - [Installation Instructions](#installation-instructions)
+- Framework (GUI)
+- Implemented MF and CVI
+- [Cite Us!](#citing-this-work)
+
 - [Useful Links](#useful-links)
 - [Usage Examples](#usage-examples)
 - [GUI Version](#gui-version)
-- [Cite Us!](#citing-this-work)
+- 
 
-# Requirements
+# Python Module
+The default way to use pyclustkit is as a library downloaded either as a pypi or by cloning this github repository. 
 
-This version of pyclustkit requires 
-- Python>=3.12
-- dgl==2.2.1 
-- torch==2.3.0
-- numpy<2.0
-
-# Installation Instructions
-
-The pyclustkit is available to download with pypi
+## Installation Instructions
+To download from the pypi channel we can use the following command and start right away.
 
 ```commandline
 pip install pyclustkit
+```
+
+Alternatively you can clone this repository to run the module. 
+
+```commandline
+git clone https://github.com/yannispoulakis/pyclustkit.git
+cd pyclustkit
+pip install -r requirements.txt
 ```
 
  ⚠️ **Warning** : Required version of dgl==2.2.1 may not be found in the pypi index when using Ubuntu/Debian Releases. 

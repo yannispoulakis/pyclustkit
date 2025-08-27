@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 with open('README_pypi.md', 'r', encoding='utf-8') as fh:
     readme = fh.read()
 
-with open("requirements.txt") as req_file:
+with open("pyclustkit/requirements.txt") as req_file:
     install_requires = req_file.read().splitlines()
 print(install_requires)
 
