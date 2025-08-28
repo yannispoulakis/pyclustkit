@@ -12,7 +12,7 @@ df = pd.read_csv(r"tests/iris.csv")
 
 mfe = MFExtractor(data=np.array(df))
 mfe.meta_features
-mfe.calculate_mf()
+mfe.calculate_mf(included_in="AutoClust")
 
 # Meta-Feature results can be retrieved in various ways.
 # (a) search_type can be any of [names, values, full_search]
