@@ -166,3 +166,105 @@ data set", Proceedings 2001 IEEE International Conference on Data Mining. </i>
 28. **wemmert_gancarski Index**: <i> J. Zhang, T. Nguyen, S. Cogill, A. Bhatti, L. Lingkun, S. Yang, S. Nahavandi. A review on cluster estimation methods and their application to neural spike data. Journal of Neural Engineering, 2018.</i> 
 29. **xie_beni Index**: <i> X.L. Xie and G. Beni. A validity measure for fuzzy clustering. IEEE Transactions on Pattern 
                   Analysis and Machine Intelligence, 1991. </i>
+</details>
+
+### Implemented Meta-Features
+<details>
+<summary>List of Implemented Meta-Features with citations</summary>
+Currently the collection consists of the following Meta-Features. We group the Meta-Features based on the paper that first introduced them:
+
+<details>
+<summary>
+M. C. P. de Souto, R. B. C. Prudêncio, R. F. Soares, D. S.A. de Araujo, I. G.Costa, T. B. Ludermir, and A. Schliep. Ranking and selecting clustering algorithms using a meta-learning approach. In Proceedings of the International Joint Conference on Neural Networks, IJCNN 2008, part of the IEEE World Congress on Computational Intelligence, WCCI 2008, Hong Kong, China, June 1-6, 2008, pages 3729–3735. IEEE, 2008.
+</summary>
+<ol>
+  <li>(Log)No.instances.</li>
+  <li>(Log) Ratio of instances to the number of features.</li>
+  <li>% of missing values.</li>
+  <li>Proportion of 𝑇^2 that are within 50% of the Chi-Squared distribution.</li>
+  <li>Skewness of the 𝑇^2 vector.</li>
+  <li>% of attributes kept after selection filter.</li>
+  <li> % of outliers *.</li>
+</ol>
+</details>
+
+<details>
+<summary>
+A. C. A. Nascimento, R. B. C. Prudêncio, M. C. P. de Souto, and I. G. Costa. Mining rules for the automatic selection process of clustering methods applied to cancer gene expression data. In Cesare Alippi, Marios M. Polycarpou, Christos G. Panayiotou, and Georgios Ellinas, editors, Artificial Neural Networks - ICANN 2009, 19th International Conference, Limassol, Cyprus, September 14-17, 2009, Proceedings, Part II, volume 5769 of Lecture Notes in Computer Science, pages 20–29. Springer, 2009.</summary>
+<ol>
+  <li>No. clusters with size inferior to k.</li>
+  <li>No. clusters with size superior to k.</li>
+  <li>Normalized Relative Entropy of cluster distribution.</li>
+  <li>Classification error obtained by the KNN algorithm (k3).</li>
+</ol>
+</details>
+
+<details>
+<summary>D. G. Ferrari and L. N. de Castro. Clustering algorithm selection by meta-learning systems: A new distance-based problem characterization and ranking combination methods. Inf. Sci., 301:181–194, 2015.</summary>
+<ol>
+  <li>(Log) No. features.</li>
+  <li>% of discrete attributes.</li>
+  <li>(Min, Max, Mean, std) class skewness.</li>
+  <li>(Min, Max, Mean, std) class kurtosis.</li>
+  <li>(Min, Max, Mean, std) discrete feature entropy.</li>
+  <li>Mean feature correlation.</li>
+  <li>Mean discrete feature concentration.</li>
+  <li>Mean, Variance, Std. Deviation, Skewness, Kurtosis of the distance vector d.</li>
+  <li>% of values in 10 formed bins of equal size in the range of the normalized distance vector d.</li>
+  <li>% of values with absolute zscore of the normalized distance vector in 4 formed bins.</li>
+</ol>
+</details>
+
+<details>
+<summary>M. Vukicevic, S. Radovanovic, B. Delibasic, and M. Suknovic. Extending meta-learning framework for clustering gene expression data with component-based algorithm design and internal evaluation measures. Int. J. Data Min. Bioinform., 14(2):101–119, 2016.</summary>
+<ol>
+  <li>Internal CVIs as measured by each algorithm configuration.</li>
+  <li>Reusable Components, 1 meta-feature for each of the table x.</li>
+</ol>
+</details>
+
+<details>
+<summary>B. A. Pimentel and A. C. P. L. F. de Carvalho. A new data characterization for selecting clustering algorithms using meta-learning. Inf. Sci., 477:203–219, 2019.</summary>
+<ol>
+  <li>Mean, Variance, Std. Deviation, Skewness, Kurtosis of the correlation vector c.</li>
+  <li>% of values in 10 formed bins of equal size in the range of the normalized correlation vector c.</li>
+  <li>% of values with absolute z score of the normalized correlation vector c in 4 formed bins</li>
+</ol>
+</details>
+
+<details>
+<summary>Y. Poulakis, C. Doulkeridis, and D. Kyriazis. Autoclust: A framework for automated clustering based on cluster validity indices. In Claudia Plant, Haixun Wang, Alfredo Cuzzocrea, Carlo Zaniolo, and Xindong Wu, editors, 20th IEEE International Conference on Data Mining, ICDM 2020, Sorrento, Italy, November 17-20, 2020, pages 1220–1225. IEEE, 2020.</summary>
+<ol>
+  <li>Internal CVIs measured by MeanShift</li>
+</ol>
+</details>
+
+<details>
+<summary>N. Cohen-Shapira and L. Rokach. Automatic selection of clustering algorithms using supervised graph embedding. Inf. Sci., 577:824–851, 2021.</summary>
+<ol>
+  <li>300 meta-features from the previous to ✗ ✗ last graph CNN layer.</li>
+</ol>
+</details>
+
+<details>
+<summary>Y. Liu, S. Li, and W. Tian. Autocluster: Meta-learning based ensemble method for automated unsupervised clustering. In Kamal Karlapalem, Hong Cheng, Naren Ramakrishnan, R. K. Agrawal, P. Krishna Reddy, Jaideep Srivastava, and Tanmoy Chakraborty, editors, Advances in Knowledge Discovery and Data Mining - 25th Pacific-Asia Conference, PAKDD 2021, Virtual Event, May 11-14, 2021, Proceedings, Part III, volume 12714 of Lecture Notes in Computer Science, pages 246–258. Springer, 2021.</summary>
+<ol>
+  <li>(Log) Ratio of features to the number of instances.</li>
+  <li>Hopkins Statistic.</li>
+  <li>PCA 95% deviations.</li>
+  <li>Skewness & kurtosis of the 1st pc of PCA.</li>
+  <li>Instance distance to closest cluster center (KMeans).</li>
+  <li>No. leaves (Agglomerative Clustering).</li>
+  <li>Reachability instances (OPTICS).</li>
+  <li>Distances to become core points(OPTICS).</li>
+</ol>
+</details>
+
+<details>
+<summary>R. El Shawi and S. Sakr. Tpe-autoclust: A tree-based pipline ensemble framework for automated clustering. In K. Selçuk Candan, Thang N. Dinh, My T. Thai, and Takashi Washio, editors, IEEE International Conference on Data Mining Workshops, ICDM 2022 - Workshops, Orlando, FL, USA, November 28 - Dec. 1, 2022, pages 1144–1153. IEEE, 2022.</summary>
+<ol>
+  <li>Internal CVIs measured by MeanShift, DBSCAN, OPTICS.</li>
+</ol>
+</details>
+
+</details>
