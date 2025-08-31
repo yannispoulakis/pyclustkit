@@ -49,7 +49,7 @@ pip install pyclustkit -f https://data.dgl.ai/wheels/torch-2.3/repo.html
 # Usage Examples
 ## Calculating Internal Cluster Validity Indices (CVI) 
 
-PyClustKit comes with an evaluation suite of 46 internal validity indices. Each is implemented on top of numpy and, 
+PyClustKit comes with an evaluation suite of 45 internal validity indices. Each is implemented on top of numpy and, 
 the module incorporates specific methods for speeding up the execution of multiple CVI by implementing a shared process 
 tracking. 
 
