@@ -216,8 +216,8 @@ def total_scatter_matrix(X):
 
 # inter-intra
 def intra_cluster_distances(pdistances, clabels, labels, idxs):
-    # labels = np.unique(clabels)
-    # idxs = {lab: np.flatnonzero(clabels == lab) for lab in labels}
+    labels = np.unique(clabels)
+    idxs = {lab: np.flatnonzero(clabels == lab) for lab in labels}
     return {lab: pdistances[np.ix_(ix, ix)] for lab, ix in idxs.items()}
 
 def sum_intra_cluster_distances(intra_cdistances):
@@ -227,8 +227,8 @@ def sum_intra_cluster_distances(intra_cdistances):
 
 
 def inter_cluster_distances(D, labels, uniq, idxs):
-    #uniq = np.unique(labels)
-    #idxs = {u: np.flatnonzero(labels == u) for u in uniq}  # compute once
+    uniq = np.unique(labels)
+    idxs = {u: np.flatnonzero(labels == u) for u in uniq}  # compute once
     return {(i, j): D[np.ix_(idxs[i], idxs[j])] for i, j in combinations(uniq, 2)}
 
 

@@ -126,22 +126,14 @@ class CVIToolbox:
         return process_results[subprocess]
 
     def silhouette(self):
-        print("method called")
-        import time 
-        start_time = time.time()
         labels = np.unique(self.y)
         idxs = {lab: np.flatnonzero(self.y == lab) for lab in labels}
-        # intra_dist = self.execute_subprocess("intra_cluster_distances")
-        from pyclustkit.eval.core._common_processes import distances, intra_cluster_distances, inter_cluster_distances
-        pdist = distances(self.X)
-        intra_dist = intra_cluster_distances(pdist, self.y, labels, idxs)
-        print("step 1", time.time()-start_time)
+        intra_dist = self.execute_subprocess("intra_cluster_distances")
+
         # a(i)
         intra_dist = {x: np.sum(y, axis=1) / (y.shape[1] - 1) for x, y in intra_dist.items()}
-        print("step 2", time.time()-start_time)
-        # inter_dist = self.execute_subprocess("inter_cluster_distances")
-        inter_dist = inter_cluster_distances(pdist, self.y, labels, idxs)
-        print("step 3", time.time()-start_time)
+
+        inter_dist = self.execute_subprocess("inter_cluster_distances")
         # b(i)
         per_point_min_dist_of_nearest = {}
         for label in set(self.y):
