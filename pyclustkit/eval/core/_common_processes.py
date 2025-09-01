@@ -6,13 +6,18 @@ import numpy as np
 from scipy.spatial.distance import pdist
 from typing import Union, Tuple
 from pyclustkit.eval.core._utils import upper_triu
+from sklearn.metrics import pairwise_distances
+import time 
 
-#TODO: Check which of np.linalg.norm or cdist or pdist is faster (cdist< norm)
+
 
 
 def distances(x):
-    return cdist(x, x)
-
+    # return cdist(x, x)
+    d_start = time.time()
+    d = pairwise_distances(x, metric="euclidean", n_jobs=-1)
+    print(time.time()-d_start)
+    return d
 
 def sum_distances(distances):
     m = distances.shape[0]
@@ -210,18 +215,22 @@ def total_scatter_matrix(X):
 
 
 # inter-intra
-def intra_cluster_distances(pdistances, clabels):
-    return {i: pdistances[np.ix_(np.where(clabels == i)[0], np.where(clabels == i)[0])] for i
-            in np.unique(clabels)}
-
+def intra_cluster_distances(pdistances, clabels, labels, idxs):
+    # labels = np.unique(clabels)
+    # idxs = {lab: np.flatnonzero(clabels == lab) for lab in labels}
+    return {lab: pdistances[np.ix_(ix, ix)] for lab, ix in idxs.items()}
 
 def sum_intra_cluster_distances(intra_cdistances):
     return {i: sum_of_upper_triu(intra_cdistances[i]) for i, j in intra_cdistances.items()}
 
 
-def inter_cluster_distances(pdistances, clabels):
-    return {(i, j): pdistances[np.ix_(np.where(clabels == i)[0], np.where(clabels == j)[0])] for i, j in
-            combinations(np.unique(clabels), r=2)}
+
+
+def inter_cluster_distances(D, labels, uniq, idxs):
+    #uniq = np.unique(labels)
+    #idxs = {u: np.flatnonzero(labels == u) for u in uniq}  # compute once
+    return {(i, j): D[np.ix_(idxs[i], idxs[j])] for i, j in combinations(uniq, 2)}
+
 
 
 def sum_inter_cluster_distances(inter_cdistances):

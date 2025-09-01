@@ -14,7 +14,6 @@ import traceback
 
 
 # TODO: Write Hausdorff in simpler terms
-# TODO: Implement calculate all or some cvi
 # TODO: Write functions for deltas denominators
 # TODO: No citation for wemmert Gancarski, has it been published? (research)
 # TODO: Check for more indices other than R - ClusterCrit
@@ -112,6 +111,7 @@ class CVIToolbox:
         else:
             for index in cvi:
                 try:
+                    print(f"calculating cvi {index}")
                     self.cvi_results[index] = self.cvi_methods_list[index]()
                 except Exception as e:
                     print(f'{index}: {e}')
@@ -126,12 +126,22 @@ class CVIToolbox:
         return process_results[subprocess]
 
     def silhouette(self):
-        intra_dist = self.execute_subprocess("intra_cluster_distances")
+        print("method called")
+        import time 
+        start_time = time.time()
+        labels = np.unique(self.y)
+        idxs = {lab: np.flatnonzero(self.y == lab) for lab in labels}
+        # intra_dist = self.execute_subprocess("intra_cluster_distances")
+        from pyclustkit.eval.core._common_processes import distances, intra_cluster_distances, inter_cluster_distances
+        pdist = distances(self.X)
+        intra_dist = intra_cluster_distances(pdist, self.y, labels, idxs)
+        print("step 1", time.time()-start_time)
         # a(i)
         intra_dist = {x: np.sum(y, axis=1) / (y.shape[1] - 1) for x, y in intra_dist.items()}
-
-        inter_dist = self.execute_subprocess("inter_cluster_distances")
-
+        print("step 2", time.time()-start_time)
+        # inter_dist = self.execute_subprocess("inter_cluster_distances")
+        inter_dist = inter_cluster_distances(pdist, self.y, labels, idxs)
+        print("step 3", time.time()-start_time)
         # b(i)
         per_point_min_dist_of_nearest = {}
         for label in set(self.y):
@@ -147,7 +157,7 @@ class CVIToolbox:
                     mean_arr = np.mean(dist_df, axis=0).reshape(-1, 1)
                 per_point_min_inter_dist.append(mean_arr)
             per_point_min_dist_of_nearest[label] = np.hstack(per_point_min_inter_dist)
-
+        print("step 4", time.time()-start_time)
         sum = 0
         counter = 0
         for key in intra_dist:
@@ -157,7 +167,7 @@ class CVIToolbox:
                 b_i = np.min(per_point_min_dist_of_nearest[key][row])
                 s_i = (b_i - a_i) / (np.max([b_i, a_i]))
                 sum += s_i
-
+        print("step 5", time.time()-start_time)
         return sum / counter
 
     def calinski_harabasz(self):
