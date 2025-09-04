@@ -1,4 +1,5 @@
-# The PyClustKit Module: All about clustering in a single Python Module!
+![PyClustKit-Logo](artifacts/pyclustkit_logo.jpg)
+# The PyClustKit Module: CVI  & Meta-Feature Extraction Made Easy!
 
 The pyclustkit module is built to include various state-of-the-art meta-features for AutoML operatios in clustering, 
 specifically meta-learning. Additionally the library includes the implementation of many clustering validity indices 
@@ -8,17 +9,18 @@ While the python module of pyclustkit is the main option to use it programmatica
 through through the dedicated gradio-based user-interface also provided as a docker image. Instructions are presented 
 in the relevant section. 
 
-## Table of Contents
-- [Python Module](#python-module)
-  - [Installation Instructions](#installation-instructions)
-- Framework (GUI)
-- Implemented MF and CVI
-- [Cite Us!](#citing-this-work)
 
-- [Useful Links](#useful-links)
+Users can also download the code on the [pyclust-demo repository](https://github.com/automl-uprc/PyClust-Demo) and follow the instructions in the corresponding README 
+file.
+
+## Table of Contents
+
+- [Installation Instructions](#installation-instructions)
+- [Cite Us!](#citing-this-work)
 - [Usage Examples](#usage-examples)
-- [GUI Version](#gui-version)
-- 
+- [Implemented MF and CVI](#implemented-mf-and-cvi)
+
+
 
 # Python Module
 The default way to use pyclustkit is as a library downloaded either as a pypi or by cloning this github repository. 
@@ -65,7 +67,7 @@ print(ct.cvi_results)
 ## Meta Learning 
 
 ### Meta-Feature Extraction
-PyClustKit comes with an evaluation suite of 46 internal validity indices. Each is implemented on top of numpy and, 
+PyClustKit comes with an evaluation suite of 45 internal validity indices. Each is implemented on top of numpy and, 
 the module incorporates specific methods for speeding up the execution of multiple CVI by implementing a shared process 
 tracking. 
 
@@ -79,21 +81,9 @@ print(ct.cvi_results)
 
 ```
 
-## GUI Version 
-Users can also opt to use the demo version of the library which comes with a graphical interface based on Gradio  and 
-various utilities such as data generation, meta-learner training and visuals. 
-
-### (A)  Ready-To-Use Docker Image
-
-```commandline
-docker run -p 7861:7861 giannispoy/pyclust 
-```
-### (B) Demo Git Repository 
-
-Users can also download the code on the [pyclust-demo repository](https://github.com/automl-uprc/PyClust-Demo) and follow the instructions in the corresponding README 
-file.
 
 
+# Implemented MF and CVI
 ### Implemented CVIs
 
 <details>

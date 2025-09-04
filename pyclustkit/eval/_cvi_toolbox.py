@@ -111,7 +111,6 @@ class CVIToolbox:
         else:
             for index in cvi:
                 try:
-                    print(f"calculating cvi {index}")
                     self.cvi_results[index] = self.cvi_methods_list[index]()
                 except Exception as e:
                     print(f'{index}: {e}')
@@ -149,7 +148,7 @@ class CVIToolbox:
                     mean_arr = np.mean(dist_df, axis=0).reshape(-1, 1)
                 per_point_min_inter_dist.append(mean_arr)
             per_point_min_dist_of_nearest[label] = np.hstack(per_point_min_inter_dist)
-        print("step 4", time.time()-start_time)
+
         sum = 0
         counter = 0
         for key in intra_dist:
@@ -159,7 +158,6 @@ class CVIToolbox:
                 b_i = np.min(per_point_min_dist_of_nearest[key][row])
                 s_i = (b_i - a_i) / (np.max([b_i, a_i]))
                 sum += s_i
-        print("step 5", time.time()-start_time)
         return sum / counter
 
     def calinski_harabasz(self):
