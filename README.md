@@ -258,3 +258,6 @@ A. C. A. Nascimento, R. B. C. Prudêncio, M. C. P. de Souto, and I. G. Costa. Mi
 </details>
 
 </details>
+
+# Contributions/Contact
+Contributions are welcome! Please open an issue or submit a pull request if you'd like to improve the project.
